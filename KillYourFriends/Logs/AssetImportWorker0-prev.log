@@ -1,6 +1,6 @@
 Using pre-set license
 Built from '2020.3/staging' branch; Version is '2020.3.9f1 (108be757e447) revision 1084391'; Using compiler version '192528614'; Build Type 'Release'
-OS: 'Windows 10 Home; OS build 19042.1165; Version 2009; 64bit' Language: 'en' Physical Memory: 16268 MB
+OS: 'Windows 10 Home; OS build 19043.1165; Version 2009; 64bit' Language: 'en' Physical Memory: 16333 MB
 BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
 
  COMMAND LINE ARGUMENTS:
@@ -11,235 +11,977 @@ C:\Program Files\Unity\Hub\Editor\2020.3.9f1\Editor\Unity.exe
 -name
 AssetImportWorker0
 -projectPath
-C:/Users/ericv/Desktop/KillYourFriends/KillYourFriends
+C:/Users/Eric/Documents/KillYourFriends/KillYourFriends
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-53932
-Successfully changed project path to: C:/Users/ericv/Desktop/KillYourFriends/KillYourFriends
-C:/Users/ericv/Desktop/KillYourFriends/KillYourFriends
+64695
+Successfully changed project path to: C:/Users/Eric/Documents/KillYourFriends/KillYourFriends
+C:/Users/Eric/Documents/KillYourFriends/KillYourFriends
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 29.67 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 32.19 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.3.9f1 (108be757e447)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.3.9f1/Editor/Data/Resources/UnitySubsystems
-[Subsystems] Discovering subsystems at path C:/Users/ericv/Desktop/KillYourFriends/KillYourFriends/Assets
+[Subsystems] Discovering subsystems at path C:/Users/Eric/Documents/KillYourFriends/KillYourFriends/Assets
 GfxDevice: creating device client; threaded=0
 Direct3D:
-    Version:  Direct3D 11.0 [level 11.0]
-    Renderer: NVIDIA GeForce 940MX (ID=0x134d)
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce GTX 1660 SUPER (ID=0x21c4)
     Vendor:   
-    VRAM:     2010 MB
-    Driver:   30.0.14.7168
+    VRAM:     5991 MB
+    Driver:   30.0.14.7196
 Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.3.9f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.3.9f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.3.9f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56184
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56568
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.9f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.9f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.002454 seconds.
+Registered in 0.003748 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 24.35 ms, found 0 plugins.
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 30.47 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.688 seconds
+- Completed reload, in  2.596 seconds
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.000825 seconds.
+Registered in 0.003706 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.22 ms, found 0 plugins.
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.31 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
+Exception :Mono.CecilX.Cil.SymbolsNotFoundException: No symbol found for file: Library/ScriptAssemblies/UnityEngine.UI.dll
+  at Mono.CecilX.Cil.DefaultSymbolReaderProvider.GetSymbolReader (Mono.CecilX.ModuleDefinition module, System.String fileName) [0x000a4] in <9a2bc2dadc3549b3bfc74bb584d58989>:0 
+  at Mono.CecilX.ModuleReader.ReadSymbols (Mono.CecilX.ModuleDefinition module, Mono.CecilX.ReaderParameters parameters) [0x00032] in <9a2bc2dadc3549b3bfc74bb584d58989>:0 
+  at Mono.CecilX.ModuleReader.CreateModule (Mono.CecilX.PE.Image image, Mono.CecilX.ReaderParameters parameters) [0x00081] in <9a2bc2dadc3549b3bfc74bb584d58989>:0 
+  at Mono.CecilX.ModuleDefinition.ReadModule (Mono.Disposable`1[T] stream, System.String fileName, Mono.CecilX.ReaderParameters parameters) [0x0000d] in <9a2bc2dadc3549b3bfc74bb584d58989>:0 
+  at Mono.CecilX.ModuleDefinition.ReadModule (System.String fileName, Mono.CecilX.ReaderParameters parameters) [0x0006c] in <9a2bc2dadc3549b3bfc74bb584d58989>:0 
+  at Mono.CecilX.AssemblyDefinition.ReadAssembly (System.String fileName, Mono.CecilX.ReaderParameters parameters) [0x00000] in <9a2bc2dadc3549b3bfc74bb584d58989>:0 
+  at Mirror.Weaver.Weaver.Weave (System.String assName, System.Collections.Generic.IEnumerable`1[T] dependencies) [0x00021] in <c715fb18b7b647039b01314727a4f271>:0 
+  at Mirror.Weaver.Weaver.WeaveAssembly (System.String assembly, System.Collections.Generic.IEnumerable`1[T] dependencies) [0x00006] in <c715fb18b7b647039b01314727a4f271>:0 
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+Mirror.Weaver.CompilationFinishedHook:HandleError (string)
+Mirror.Weaver.Weaver:WeaveAssembly (string,System.Collections.Generic.IEnumerable`1<string>)
+Mirror.Weaver.CompilationFinishedHook:OnCompilationFinished (string,UnityEditor.Compilation.CompilerMessage[])
+Mirror.Weaver.CompilationFinishedHook:WeaveExistingAssemblies ()
+Mirror.Weaver.CompilationFinishedHook:OnInitializeOnLoad ()
+
+Weaving failed for: Library/ScriptAssemblies/UnityEngine.UI.dll
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+Mirror.Weaver.CompilationFinishedHook:OnCompilationFinished (string,UnityEditor.Compilation.CompilerMessage[])
+Mirror.Weaver.CompilationFinishedHook:WeaveExistingAssemblies ()
+Mirror.Weaver.CompilationFinishedHook:OnInitializeOnLoad ()
+
+Exception :Mono.CecilX.Cil.SymbolsNotFoundException: No symbol found for file: Library/ScriptAssemblies/UnityEngine.TestRunner.dll
+  at Mono.CecilX.Cil.DefaultSymbolReaderProvider.GetSymbolReader (Mono.CecilX.ModuleDefinition module, System.String fileName) [0x000a4] in <9a2bc2dadc3549b3bfc74bb584d58989>:0 
+  at Mono.CecilX.ModuleReader.ReadSymbols (Mono.CecilX.ModuleDefinition module, Mono.CecilX.ReaderParameters parameters) [0x00032] in <9a2bc2dadc3549b3bfc74bb584d58989>:0 
+  at Mono.CecilX.ModuleReader.CreateModule (Mono.CecilX.PE.Image image, Mono.CecilX.ReaderParameters parameters) [0x00081] in <9a2bc2dadc3549b3bfc74bb584d58989>:0 
+  at Mono.CecilX.ModuleDefinition.ReadModule (Mono.Disposable`1[T] stream, System.String fileName, Mono.CecilX.ReaderParameters parameters) [0x0000d] in <9a2bc2dadc3549b3bfc74bb584d58989>:0 
+  at Mono.CecilX.ModuleDefinition.ReadModule (System.String fileName, Mono.CecilX.ReaderParameters parameters) [0x0006c] in <9a2bc2dadc3549b3bfc74bb584d58989>:0 
+  at Mono.CecilX.AssemblyDefinition.ReadAssembly (System.String fileName, Mono.CecilX.ReaderParameters parameters) [0x00000] in <9a2bc2dadc3549b3bfc74bb584d58989>:0 
+  at Mirror.Weaver.Weaver.Weave (System.String assName, System.Collections.Generic.IEnumerable`1[T] dependencies) [0x00021] in <c715fb18b7b647039b01314727a4f271>:0 
+  at Mirror.Weaver.Weaver.WeaveAssembly (System.String assembly, System.Collections.Generic.IEnumerable`1[T] dependencies) [0x00006] in <c715fb18b7b647039b01314727a4f271>:0 
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+Mirror.Weaver.CompilationFinishedHook:HandleError (string)
+Mirror.Weaver.Weaver:WeaveAssembly (string,System.Collections.Generic.IEnumerable`1<string>)
+Mirror.Weaver.CompilationFinishedHook:OnCompilationFinished (string,UnityEditor.Compilation.CompilerMessage[])
+Mirror.Weaver.CompilationFinishedHook:WeaveExistingAssemblies ()
+Mirror.Weaver.CompilationFinishedHook:OnInitializeOnLoad ()
+
+Weaving failed for: Library/ScriptAssemblies/UnityEngine.TestRunner.dll
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+Mirror.Weaver.CompilationFinishedHook:OnCompilationFinished (string,UnityEditor.Compilation.CompilerMessage[])
+Mirror.Weaver.CompilationFinishedHook:WeaveExistingAssemblies ()
+Mirror.Weaver.CompilationFinishedHook:OnInitializeOnLoad ()
+
+Exception :Mono.CecilX.Cil.SymbolsNotFoundException: No symbol found for file: Library/ScriptAssemblies/SimpleWebTransport.dll
+  at Mono.CecilX.Cil.DefaultSymbolReaderProvider.GetSymbolReader (Mono.CecilX.ModuleDefinition module, System.String fileName) [0x000a4] in <9a2bc2dadc3549b3bfc74bb584d58989>:0 
+  at Mono.CecilX.ModuleReader.ReadSymbols (Mono.CecilX.ModuleDefinition module, Mono.CecilX.ReaderParameters parameters) [0x00032] in <9a2bc2dadc3549b3bfc74bb584d58989>:0 
+  at Mono.CecilX.ModuleReader.CreateModule (Mono.CecilX.PE.Image image, Mono.CecilX.ReaderParameters parameters) [0x00081] in <9a2bc2dadc3549b3bfc74bb584d58989>:0 
+  at Mono.CecilX.ModuleDefinition.ReadModule (Mono.Disposable`1[T] stream, System.String fileName, Mono.CecilX.ReaderParameters parameters) [0x0000d] in <9a2bc2dadc3549b3bfc74bb584d58989>:0 
+  at Mono.CecilX.ModuleDefinition.ReadModule (System.String fileName, Mono.CecilX.ReaderParameters parameters) [0x0006c] in <9a2bc2dadc3549b3bfc74bb584d58989>:0 
+  at Mono.CecilX.AssemblyDefinition.ReadAssembly (System.String fileName, Mono.CecilX.ReaderParameters parameters) [0x00000] in <9a2bc2dadc3549b3bfc74bb584d58989>:0 
+  at Mirror.Weaver.Weaver.Weave (System.String assName, System.Collections.Generic.IEnumerable`1[T] dependencies) [0x00021] in <c715fb18b7b647039b01314727a4f271>:0 
+  at Mirror.Weaver.Weaver.WeaveAssembly (System.String assembly, System.Collections.Generic.IEnumerable`1[T] dependencies) [0x00006] in <c715fb18b7b647039b01314727a4f271>:0 
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+Mirror.Weaver.CompilationFinishedHook:HandleError (string)
+Mirror.Weaver.Weaver:WeaveAssembly (string,System.Collections.Generic.IEnumerable`1<string>)
+Mirror.Weaver.CompilationFinishedHook:OnCompilationFinished (string,UnityEditor.Compilation.CompilerMessage[])
+Mirror.Weaver.CompilationFinishedHook:WeaveExistingAssemblies ()
+Mirror.Weaver.CompilationFinishedHook:OnInitializeOnLoad ()
+
+Weaving failed for: Library/ScriptAssemblies/SimpleWebTransport.dll
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+Mirror.Weaver.CompilationFinishedHook:OnCompilationFinished (string,UnityEditor.Compilation.CompilerMessage[])
+Mirror.Weaver.CompilationFinishedHook:WeaveExistingAssemblies ()
+Mirror.Weaver.CompilationFinishedHook:OnInitializeOnLoad ()
+
+Exception :Mono.CecilX.Cil.SymbolsNotFoundException: No symbol found for file: Library/ScriptAssemblies/Unity.Timeline.dll
+  at Mono.CecilX.Cil.DefaultSymbolReaderProvider.GetSymbolReader (Mono.CecilX.ModuleDefinition module, System.String fileName) [0x000a4] in <9a2bc2dadc3549b3bfc74bb584d58989>:0 
+  at Mono.CecilX.ModuleReader.ReadSymbols (Mono.CecilX.ModuleDefinition module, Mono.CecilX.ReaderParameters parameters) [0x00032] in <9a2bc2dadc3549b3bfc74bb584d58989>:0 
+  at Mono.CecilX.ModuleReader.CreateModule (Mono.CecilX.PE.Image image, Mono.CecilX.ReaderParameters parameters) [0x00081] in <9a2bc2dadc3549b3bfc74bb584d58989>:0 
+  at Mono.CecilX.ModuleDefinition.ReadModule (Mono.Disposable`1[T] stream, System.String fileName, Mono.CecilX.ReaderParameters parameters) [0x0000d] in <9a2bc2dadc3549b3bfc74bb584d58989>:0 
+  at Mono.CecilX.ModuleDefinition.ReadModule (System.String fileName, Mono.CecilX.ReaderParameters parameters) [0x0006c] in <9a2bc2dadc3549b3bfc74bb584d58989>:0 
+  at Mono.CecilX.AssemblyDefinition.ReadAssembly (System.String fileName, Mono.CecilX.ReaderParameters parameters) [0x00000] in <9a2bc2dadc3549b3bfc74bb584d58989>:0 
+  at Mirror.Weaver.Weaver.Weave (System.String assName, System.Collections.Generic.IEnumerable`1[T] dependencies) [0x00021] in <c715fb18b7b647039b01314727a4f271>:0 
+  at Mirror.Weaver.Weaver.WeaveAssembly (System.String assembly, System.Collections.Generic.IEnumerable`1[T] dependencies) [0x00006] in <c715fb18b7b647039b01314727a4f271>:0 
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+Mirror.Weaver.CompilationFinishedHook:HandleError (string)
+Mirror.Weaver.Weaver:WeaveAssembly (string,System.Collections.Generic.IEnumerable`1<string>)
+Mirror.Weaver.CompilationFinishedHook:OnCompilationFinished (string,UnityEditor.Compilation.CompilerMessage[])
+Mirror.Weaver.CompilationFinishedHook:WeaveExistingAssemblies ()
+Mirror.Weaver.CompilationFinishedHook:OnInitializeOnLoad ()
+
+Weaving failed for: Library/ScriptAssemblies/Unity.Timeline.dll
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+Mirror.Weaver.CompilationFinishedHook:OnCompilationFinished (string,UnityEditor.Compilation.CompilerMessage[])
+Mirror.Weaver.CompilationFinishedHook:WeaveExistingAssemblies ()
+Mirror.Weaver.CompilationFinishedHook:OnInitializeOnLoad ()
+
+Exception :Mono.CecilX.Cil.SymbolsNotFoundException: No symbol found for file: Library/ScriptAssemblies/Mirror.Examples.dll
+  at Mono.CecilX.Cil.DefaultSymbolReaderProvider.GetSymbolReader (Mono.CecilX.ModuleDefinition module, System.String fileName) [0x000a4] in <9a2bc2dadc3549b3bfc74bb584d58989>:0 
+  at Mono.CecilX.ModuleReader.ReadSymbols (Mono.CecilX.ModuleDefinition module, Mono.CecilX.ReaderParameters parameters) [0x00032] in <9a2bc2dadc3549b3bfc74bb584d58989>:0 
+  at Mono.CecilX.ModuleReader.CreateModule (Mono.CecilX.PE.Image image, Mono.CecilX.ReaderParameters parameters) [0x00081] in <9a2bc2dadc3549b3bfc74bb584d58989>:0 
+  at Mono.CecilX.ModuleDefinition.ReadModule (Mono.Disposable`1[T] stream, System.String fileName, Mono.CecilX.ReaderParameters parameters) [0x0000d] in <9a2bc2dadc3549b3bfc74bb584d58989>:0 
+  at Mono.CecilX.ModuleDefinition.ReadModule (System.String fileName, Mono.CecilX.ReaderParameters parameters) [0x0006c] in <9a2bc2dadc3549b3bfc74bb584d58989>:0 
+  at Mono.CecilX.AssemblyDefinition.ReadAssembly (System.String fileName, Mono.CecilX.ReaderParameters parameters) [0x00000] in <9a2bc2dadc3549b3bfc74bb584d58989>:0 
+  at Mirror.Weaver.Weaver.Weave (System.String assName, System.Collections.Generic.IEnumerable`1[T] dependencies) [0x00021] in <c715fb18b7b647039b01314727a4f271>:0 
+  at Mirror.Weaver.Weaver.WeaveAssembly (System.String assembly, System.Collections.Generic.IEnumerable`1[T] dependencies) [0x00006] in <c715fb18b7b647039b01314727a4f271>:0 
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+Mirror.Weaver.CompilationFinishedHook:HandleError (string)
+Mirror.Weaver.Weaver:WeaveAssembly (string,System.Collections.Generic.IEnumerable`1<string>)
+Mirror.Weaver.CompilationFinishedHook:OnCompilationFinished (string,UnityEditor.Compilation.CompilerMessage[])
+Mirror.Weaver.CompilationFinishedHook:WeaveExistingAssemblies ()
+Mirror.Weaver.CompilationFinishedHook:OnInitializeOnLoad ()
+
+Weaving failed for: Library/ScriptAssemblies/Mirror.Examples.dll
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+Mirror.Weaver.CompilationFinishedHook:OnCompilationFinished (string,UnityEditor.Compilation.CompilerMessage[])
+Mirror.Weaver.CompilationFinishedHook:WeaveExistingAssemblies ()
+Mirror.Weaver.CompilationFinishedHook:OnInitializeOnLoad ()
+
+Exception :Mono.CecilX.Cil.SymbolsNotFoundException: No symbol found for file: Library/ScriptAssemblies/Mirror.Components.dll
+  at Mono.CecilX.Cil.DefaultSymbolReaderProvider.GetSymbolReader (Mono.CecilX.ModuleDefinition module, System.String fileName) [0x000a4] in <9a2bc2dadc3549b3bfc74bb584d58989>:0 
+  at Mono.CecilX.ModuleReader.ReadSymbols (Mono.CecilX.ModuleDefinition module, Mono.CecilX.ReaderParameters parameters) [0x00032] in <9a2bc2dadc3549b3bfc74bb584d58989>:0 
+  at Mono.CecilX.ModuleReader.CreateModule (Mono.CecilX.PE.Image image, Mono.CecilX.ReaderParameters parameters) [0x00081] in <9a2bc2dadc3549b3bfc74bb584d58989>:0 
+  at Mono.CecilX.ModuleDefinition.ReadModule (Mono.Disposable`1[T] stream, System.String fileName, Mono.CecilX.ReaderParameters parameters) [0x0000d] in <9a2bc2dadc3549b3bfc74bb584d58989>:0 
+  at Mono.CecilX.ModuleDefinition.ReadModule (System.String fileName, Mono.CecilX.ReaderParameters parameters) [0x0006c] in <9a2bc2dadc3549b3bfc74bb584d58989>:0 
+  at Mono.CecilX.AssemblyDefinition.ReadAssembly (System.String fileName, Mono.CecilX.ReaderParameters parameters) [0x00000] in <9a2bc2dadc3549b3bfc74bb584d58989>:0 
+  at Mirror.Weaver.Weaver.Weave (System.String assName, System.Collections.Generic.IEnumerable`1[T] dependencies) [0x00021] in <c715fb18b7b647039b01314727a4f271>:0 
+  at Mirror.Weaver.Weaver.WeaveAssembly (System.String assembly, System.Collections.Generic.IEnumerable`1[T] dependencies) [0x00006] in <c715fb18b7b647039b01314727a4f271>:0 
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+Mirror.Weaver.CompilationFinishedHook:HandleError (string)
+Mirror.Weaver.Weaver:WeaveAssembly (string,System.Collections.Generic.IEnumerable`1<string>)
+Mirror.Weaver.CompilationFinishedHook:OnCompilationFinished (string,UnityEditor.Compilation.CompilerMessage[])
+Mirror.Weaver.CompilationFinishedHook:WeaveExistingAssemblies ()
+Mirror.Weaver.CompilationFinishedHook:OnInitializeOnLoad ()
+
+Weaving failed for: Library/ScriptAssemblies/Mirror.Components.dll
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+Mirror.Weaver.CompilationFinishedHook:OnCompilationFinished (string,UnityEditor.Compilation.CompilerMessage[])
+Mirror.Weaver.CompilationFinishedHook:WeaveExistingAssemblies ()
+Mirror.Weaver.CompilationFinishedHook:OnInitializeOnLoad ()
+
+Exception :Mono.CecilX.Cil.SymbolsNotFoundException: No symbol found for file: Library/ScriptAssemblies/Unity.TextMeshPro.dll
+  at Mono.CecilX.Cil.DefaultSymbolReaderProvider.GetSymbolReader (Mono.CecilX.ModuleDefinition module, System.String fileName) [0x000a4] in <9a2bc2dadc3549b3bfc74bb584d58989>:0 
+  at Mono.CecilX.ModuleReader.ReadSymbols (Mono.CecilX.ModuleDefinition module, Mono.CecilX.ReaderParameters parameters) [0x00032] in <9a2bc2dadc3549b3bfc74bb584d58989>:0 
+  at Mono.CecilX.ModuleReader.CreateModule (Mono.CecilX.PE.Image image, Mono.CecilX.ReaderParameters parameters) [0x00081] in <9a2bc2dadc3549b3bfc74bb584d58989>:0 
+  at Mono.CecilX.ModuleDefinition.ReadModule (Mono.Disposable`1[T] stream, System.String fileName, Mono.CecilX.ReaderParameters parameters) [0x0000d] in <9a2bc2dadc3549b3bfc74bb584d58989>:0 
+  at Mono.CecilX.ModuleDefinition.ReadModule (System.String fileName, Mono.CecilX.ReaderParameters parameters) [0x0006c] in <9a2bc2dadc3549b3bfc74bb584d58989>:0 
+  at Mono.CecilX.AssemblyDefinition.ReadAssembly (System.String fileName, Mono.CecilX.ReaderParameters parameters) [0x00000] in <9a2bc2dadc3549b3bfc74bb584d58989>:0 
+  at Mirror.Weaver.Weaver.Weave (System.String assName, System.Collections.Generic.IEnumerable`1[T] dependencies) [0x00021] in <c715fb18b7b647039b01314727a4f271>:0 
+  at Mirror.Weaver.Weaver.WeaveAssembly (System.String assembly, System.Collections.Generic.IEnumerable`1[T] dependencies) [0x00006] in <c715fb18b7b647039b01314727a4f271>:0 
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+Mirror.Weaver.CompilationFinishedHook:HandleError (string)
+Mirror.Weaver.Weaver:WeaveAssembly (string,System.Collections.Generic.IEnumerable`1<string>)
+Mirror.Weaver.CompilationFinishedHook:OnCompilationFinished (string,UnityEditor.Compilation.CompilerMessage[])
+Mirror.Weaver.CompilationFinishedHook:WeaveExistingAssemblies ()
+Mirror.Weaver.CompilationFinishedHook:OnInitializeOnLoad ()
+
+Weaving failed for: Library/ScriptAssemblies/Unity.TextMeshPro.dll
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+Mirror.Weaver.CompilationFinishedHook:OnCompilationFinished (string,UnityEditor.Compilation.CompilerMessage[])
+Mirror.Weaver.CompilationFinishedHook:WeaveExistingAssemblies ()
+Mirror.Weaver.CompilationFinishedHook:OnInitializeOnLoad ()
+
+Exception :Mono.CecilX.Cil.SymbolsNotFoundException: No symbol found for file: Library/ScriptAssemblies/kcp2k.dll
+  at Mono.CecilX.Cil.DefaultSymbolReaderProvider.GetSymbolReader (Mono.CecilX.ModuleDefinition module, System.String fileName) [0x000a4] in <9a2bc2dadc3549b3bfc74bb584d58989>:0 
+  at Mono.CecilX.ModuleReader.ReadSymbols (Mono.CecilX.ModuleDefinition module, Mono.CecilX.ReaderParameters parameters) [0x00032] in <9a2bc2dadc3549b3bfc74bb584d58989>:0 
+  at Mono.CecilX.ModuleReader.CreateModule (Mono.CecilX.PE.Image image, Mono.CecilX.ReaderParameters parameters) [0x00081] in <9a2bc2dadc3549b3bfc74bb584d58989>:0 
+  at Mono.CecilX.ModuleDefinition.ReadModule (Mono.Disposable`1[T] stream, System.String fileName, Mono.CecilX.ReaderParameters parameters) [0x0000d] in <9a2bc2dadc3549b3bfc74bb584d58989>:0 
+  at Mono.CecilX.ModuleDefinition.ReadModule (System.String fileName, Mono.CecilX.ReaderParameters parameters) [0x0006c] in <9a2bc2dadc3549b3bfc74bb584d58989>:0 
+  at Mono.CecilX.AssemblyDefinition.ReadAssembly (System.String fileName, Mono.CecilX.ReaderParameters parameters) [0x00000] in <9a2bc2dadc3549b3bfc74bb584d58989>:0 
+  at Mirror.Weaver.Weaver.Weave (System.String assName, System.Collections.Generic.IEnumerable`1[T] dependencies) [0x00021] in <c715fb18b7b647039b01314727a4f271>:0 
+  at Mirror.Weaver.Weaver.WeaveAssembly (System.String assembly, System.Collections.Generic.IEnumerable`1[T] dependencies) [0x00006] in <c715fb18b7b647039b01314727a4f271>:0 
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+Mirror.Weaver.CompilationFinishedHook:HandleError (string)
+Mirror.Weaver.Weaver:WeaveAssembly (string,System.Collections.Generic.IEnumerable`1<string>)
+Mirror.Weaver.CompilationFinishedHook:OnCompilationFinished (string,UnityEditor.Compilation.CompilerMessage[])
+Mirror.Weaver.CompilationFinishedHook:WeaveExistingAssemblies ()
+Mirror.Weaver.CompilationFinishedHook:OnInitializeOnLoad ()
+
+Weaving failed for: Library/ScriptAssemblies/kcp2k.dll
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+Mirror.Weaver.CompilationFinishedHook:OnCompilationFinished (string,UnityEditor.Compilation.CompilerMessage[])
+Mirror.Weaver.CompilationFinishedHook:WeaveExistingAssemblies ()
+Mirror.Weaver.CompilationFinishedHook:OnInitializeOnLoad ()
+
+Exception :Mono.CecilX.Cil.SymbolsNotFoundException: No symbol found for file: Library/ScriptAssemblies/Telepathy.dll
+  at Mono.CecilX.Cil.DefaultSymbolReaderProvider.GetSymbolReader (Mono.CecilX.ModuleDefinition module, System.String fileName) [0x000a4] in <9a2bc2dadc3549b3bfc74bb584d58989>:0 
+  at Mono.CecilX.ModuleReader.ReadSymbols (Mono.CecilX.ModuleDefinition module, Mono.CecilX.ReaderParameters parameters) [0x00032] in <9a2bc2dadc3549b3bfc74bb584d58989>:0 
+  at Mono.CecilX.ModuleReader.CreateModule (Mono.CecilX.PE.Image image, Mono.CecilX.ReaderParameters parameters) [0x00081] in <9a2bc2dadc3549b3bfc74bb584d58989>:0 
+  at Mono.CecilX.ModuleDefinition.ReadModule (Mono.Disposable`1[T] stream, System.String fileName, Mono.CecilX.ReaderParameters parameters) [0x0000d] in <9a2bc2dadc3549b3bfc74bb584d58989>:0 
+  at Mono.CecilX.ModuleDefinition.ReadModule (System.String fileName, Mono.CecilX.ReaderParameters parameters) [0x0006c] in <9a2bc2dadc3549b3bfc74bb584d58989>:0 
+  at Mono.CecilX.AssemblyDefinition.ReadAssembly (System.String fileName, Mono.CecilX.ReaderParameters parameters) [0x00000] in <9a2bc2dadc3549b3bfc74bb584d58989>:0 
+  at Mirror.Weaver.Weaver.Weave (System.String assName, System.Collections.Generic.IEnumerable`1[T] dependencies) [0x00021] in <c715fb18b7b647039b01314727a4f271>:0 
+  at Mirror.Weaver.Weaver.WeaveAssembly (System.String assembly, System.Collections.Generic.IEnumerable`1[T] dependencies) [0x00006] in <c715fb18b7b647039b01314727a4f271>:0 
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+Mirror.Weaver.CompilationFinishedHook:HandleError (string)
+Mirror.Weaver.Weaver:WeaveAssembly (string,System.Collections.Generic.IEnumerable`1<string>)
+Mirror.Weaver.CompilationFinishedHook:OnCompilationFinished (string,UnityEditor.Compilation.CompilerMessage[])
+Mirror.Weaver.CompilationFinishedHook:WeaveExistingAssemblies ()
+Mirror.Weaver.CompilationFinishedHook:OnInitializeOnLoad ()
+
+Weaving failed for: Library/ScriptAssemblies/Telepathy.dll
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+Mirror.Weaver.CompilationFinishedHook:OnCompilationFinished (string,UnityEditor.Compilation.CompilerMessage[])
+Mirror.Weaver.CompilationFinishedHook:WeaveExistingAssemblies ()
+Mirror.Weaver.CompilationFinishedHook:OnInitializeOnLoad ()
+
+Exception :Mono.CecilX.Cil.SymbolsNotFoundException: No symbol found for file: Library/ScriptAssemblies/Mirror.Authenticators.dll
+  at Mono.CecilX.Cil.DefaultSymbolReaderProvider.GetSymbolReader (Mono.CecilX.ModuleDefinition module, System.String fileName) [0x000a4] in <9a2bc2dadc3549b3bfc74bb584d58989>:0 
+  at Mono.CecilX.ModuleReader.ReadSymbols (Mono.CecilX.ModuleDefinition module, Mono.CecilX.ReaderParameters parameters) [0x00032] in <9a2bc2dadc3549b3bfc74bb584d58989>:0 
+  at Mono.CecilX.ModuleReader.CreateModule (Mono.CecilX.PE.Image image, Mono.CecilX.ReaderParameters parameters) [0x00081] in <9a2bc2dadc3549b3bfc74bb584d58989>:0 
+  at Mono.CecilX.ModuleDefinition.ReadModule (Mono.Disposable`1[T] stream, System.String fileName, Mono.CecilX.ReaderParameters parameters) [0x0000d] in <9a2bc2dadc3549b3bfc74bb584d58989>:0 
+  at Mono.CecilX.ModuleDefinition.ReadModule (System.String fileName, Mono.CecilX.ReaderParameters parameters) [0x0006c] in <9a2bc2dadc3549b3bfc74bb584d58989>:0 
+  at Mono.CecilX.AssemblyDefinition.ReadAssembly (System.String fileName, Mono.CecilX.ReaderParameters parameters) [0x00000] in <9a2bc2dadc3549b3bfc74bb584d58989>:0 
+  at Mirror.Weaver.Weaver.Weave (System.String assName, System.Collections.Generic.IEnumerable`1[T] dependencies) [0x00021] in <c715fb18b7b647039b01314727a4f271>:0 
+  at Mirror.Weaver.Weaver.WeaveAssembly (System.String assembly, System.Collections.Generic.IEnumerable`1[T] dependencies) [0x00006] in <c715fb18b7b647039b01314727a4f271>:0 
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+Mirror.Weaver.CompilationFinishedHook:HandleError (string)
+Mirror.Weaver.Weaver:WeaveAssembly (string,System.Collections.Generic.IEnumerable`1<string>)
+Mirror.Weaver.CompilationFinishedHook:OnCompilationFinished (string,UnityEditor.Compilation.CompilerMessage[])
+Mirror.Weaver.CompilationFinishedHook:WeaveExistingAssemblies ()
+Mirror.Weaver.CompilationFinishedHook:OnInitializeOnLoad ()
+
+Weaving failed for: Library/ScriptAssemblies/Mirror.Authenticators.dll
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+Mirror.Weaver.CompilationFinishedHook:OnCompilationFinished (string,UnityEditor.Compilation.CompilerMessage[])
+Mirror.Weaver.CompilationFinishedHook:WeaveExistingAssemblies ()
+Mirror.Weaver.CompilationFinishedHook:OnInitializeOnLoad ()
+
+Exception :Mono.CecilX.Cil.SymbolsNotFoundException: No symbol found for file: Library/ScriptAssemblies/where-allocations.dll
+  at Mono.CecilX.Cil.DefaultSymbolReaderProvider.GetSymbolReader (Mono.CecilX.ModuleDefinition module, System.String fileName) [0x000a4] in <9a2bc2dadc3549b3bfc74bb584d58989>:0 
+  at Mono.CecilX.ModuleReader.ReadSymbols (Mono.CecilX.ModuleDefinition module, Mono.CecilX.ReaderParameters parameters) [0x00032] in <9a2bc2dadc3549b3bfc74bb584d58989>:0 
+  at Mono.CecilX.ModuleReader.CreateModule (Mono.CecilX.PE.Image image, Mono.CecilX.ReaderParameters parameters) [0x00081] in <9a2bc2dadc3549b3bfc74bb584d58989>:0 
+  at Mono.CecilX.ModuleDefinition.ReadModule (Mono.Disposable`1[T] stream, System.String fileName, Mono.CecilX.ReaderParameters parameters) [0x0000d] in <9a2bc2dadc3549b3bfc74bb584d58989>:0 
+  at Mono.CecilX.ModuleDefinition.ReadModule (System.String fileName, Mono.CecilX.ReaderParameters parameters) [0x0006c] in <9a2bc2dadc3549b3bfc74bb584d58989>:0 
+  at Mono.CecilX.AssemblyDefinition.ReadAssembly (System.String fileName, Mono.CecilX.ReaderParameters parameters) [0x00000] in <9a2bc2dadc3549b3bfc74bb584d58989>:0 
+  at Mirror.Weaver.Weaver.Weave (System.String assName, System.Collections.Generic.IEnumerable`1[T] dependencies) [0x00021] in <c715fb18b7b647039b01314727a4f271>:0 
+  at Mirror.Weaver.Weaver.WeaveAssembly (System.String assembly, System.Collections.Generic.IEnumerable`1[T] dependencies) [0x00006] in <c715fb18b7b647039b01314727a4f271>:0 
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+Mirror.Weaver.CompilationFinishedHook:HandleError (string)
+Mirror.Weaver.Weaver:WeaveAssembly (string,System.Collections.Generic.IEnumerable`1<string>)
+Mirror.Weaver.CompilationFinishedHook:OnCompilationFinished (string,UnityEditor.Compilation.CompilerMessage[])
+Mirror.Weaver.CompilationFinishedHook:WeaveExistingAssemblies ()
+Mirror.Weaver.CompilationFinishedHook:OnInitializeOnLoad ()
+
+Weaving failed for: Library/ScriptAssemblies/where-allocations.dll
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+Mirror.Weaver.CompilationFinishedHook:OnCompilationFinished (string,UnityEditor.Compilation.CompilerMessage[])
+Mirror.Weaver.CompilationFinishedHook:WeaveExistingAssemblies ()
+Mirror.Weaver.CompilationFinishedHook:OnInitializeOnLoad ()
+
+Exception :Mono.CecilX.Cil.SymbolsNotFoundException: No symbol found for file: Library/ScriptAssemblies/UnityEditor.TestRunner.dll
+  at Mono.CecilX.Cil.DefaultSymbolReaderProvider.GetSymbolReader (Mono.CecilX.ModuleDefinition module, System.String fileName) [0x000a4] in <9a2bc2dadc3549b3bfc74bb584d58989>:0 
+  at Mono.CecilX.ModuleReader.ReadSymbols (Mono.CecilX.ModuleDefinition module, Mono.CecilX.ReaderParameters parameters) [0x00032] in <9a2bc2dadc3549b3bfc74bb584d58989>:0 
+  at Mono.CecilX.ModuleReader.CreateModule (Mono.CecilX.PE.Image image, Mono.CecilX.ReaderParameters parameters) [0x00081] in <9a2bc2dadc3549b3bfc74bb584d58989>:0 
+  at Mono.CecilX.ModuleDefinition.ReadModule (Mono.Disposable`1[T] stream, System.String fileName, Mono.CecilX.ReaderParameters parameters) [0x0000d] in <9a2bc2dadc3549b3bfc74bb584d58989>:0 
+  at Mono.CecilX.ModuleDefinition.ReadModule (System.String fileName, Mono.CecilX.ReaderParameters parameters) [0x0006c] in <9a2bc2dadc3549b3bfc74bb584d58989>:0 
+  at Mono.CecilX.AssemblyDefinition.ReadAssembly (System.String fileName, Mono.CecilX.ReaderParameters parameters) [0x00000] in <9a2bc2dadc3549b3bfc74bb584d58989>:0 
+  at Mirror.Weaver.Weaver.Weave (System.String assName, System.Collections.Generic.IEnumerable`1[T] dependencies) [0x00021] in <c715fb18b7b647039b01314727a4f271>:0 
+  at Mirror.Weaver.Weaver.WeaveAssembly (System.String assembly, System.Collections.Generic.IEnumerable`1[T] dependencies) [0x00006] in <c715fb18b7b647039b01314727a4f271>:0 
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+Mirror.Weaver.CompilationFinishedHook:HandleError (string)
+Mirror.Weaver.Weaver:WeaveAssembly (string,System.Collections.Generic.IEnumerable`1<string>)
+Mirror.Weaver.CompilationFinishedHook:OnCompilationFinished (string,UnityEditor.Compilation.CompilerMessage[])
+Mirror.Weaver.CompilationFinishedHook:WeaveExistingAssemblies ()
+Mirror.Weaver.CompilationFinishedHook:OnInitializeOnLoad ()
+
+Weaving failed for: Library/ScriptAssemblies/UnityEditor.TestRunner.dll
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+Mirror.Weaver.CompilationFinishedHook:OnCompilationFinished (string,UnityEditor.Compilation.CompilerMessage[])
+Mirror.Weaver.CompilationFinishedHook:WeaveExistingAssemblies ()
+Mirror.Weaver.CompilationFinishedHook:OnInitializeOnLoad ()
+
+Exception :Mono.CecilX.Cil.SymbolsNotFoundException: No symbol found for file: Library/ScriptAssemblies/UnityEditor.UI.dll
+  at Mono.CecilX.Cil.DefaultSymbolReaderProvider.GetSymbolReader (Mono.CecilX.ModuleDefinition module, System.String fileName) [0x000a4] in <9a2bc2dadc3549b3bfc74bb584d58989>:0 
+  at Mono.CecilX.ModuleReader.ReadSymbols (Mono.CecilX.ModuleDefinition module, Mono.CecilX.ReaderParameters parameters) [0x00032] in <9a2bc2dadc3549b3bfc74bb584d58989>:0 
+  at Mono.CecilX.ModuleReader.CreateModule (Mono.CecilX.PE.Image image, Mono.CecilX.ReaderParameters parameters) [0x00081] in <9a2bc2dadc3549b3bfc74bb584d58989>:0 
+  at Mono.CecilX.ModuleDefinition.ReadModule (Mono.Disposable`1[T] stream, System.String fileName, Mono.CecilX.ReaderParameters parameters) [0x0000d] in <9a2bc2dadc3549b3bfc74bb584d58989>:0 
+  at Mono.CecilX.ModuleDefinition.ReadModule (System.String fileName, Mono.CecilX.ReaderParameters parameters) [0x0006c] in <9a2bc2dadc3549b3bfc74bb584d58989>:0 
+  at Mono.CecilX.AssemblyDefinition.ReadAssembly (System.String fileName, Mono.CecilX.ReaderParameters parameters) [0x00000] in <9a2bc2dadc3549b3bfc74bb584d58989>:0 
+  at Mirror.Weaver.Weaver.Weave (System.String assName, System.Collections.Generic.IEnumerable`1[T] dependencies) [0x00021] in <c715fb18b7b647039b01314727a4f271>:0 
+  at Mirror.Weaver.Weaver.WeaveAssembly (System.String assembly, System.Collections.Generic.IEnumerable`1[T] dependencies) [0x00006] in <c715fb18b7b647039b01314727a4f271>:0 
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+Mirror.Weaver.CompilationFinishedHook:HandleError (string)
+Mirror.Weaver.Weaver:WeaveAssembly (string,System.Collections.Generic.IEnumerable`1<string>)
+Mirror.Weaver.CompilationFinishedHook:OnCompilationFinished (string,UnityEditor.Compilation.CompilerMessage[])
+Mirror.Weaver.CompilationFinishedHook:WeaveExistingAssemblies ()
+Mirror.Weaver.CompilationFinishedHook:OnInitializeOnLoad ()
+
+Weaving failed for: Library/ScriptAssemblies/UnityEditor.UI.dll
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+Mirror.Weaver.CompilationFinishedHook:OnCompilationFinished (string,UnityEditor.Compilation.CompilerMessage[])
+Mirror.Weaver.CompilationFinishedHook:WeaveExistingAssemblies ()
+Mirror.Weaver.CompilationFinishedHook:OnInitializeOnLoad ()
+
+Exception :Mono.CecilX.Cil.SymbolsNotFoundException: No symbol found for file: Library/ScriptAssemblies/Mirror.CompilerSymbols.dll
+  at Mono.CecilX.Cil.DefaultSymbolReaderProvider.GetSymbolReader (Mono.CecilX.ModuleDefinition module, System.String fileName) [0x000a4] in <9a2bc2dadc3549b3bfc74bb584d58989>:0 
+  at Mono.CecilX.ModuleReader.ReadSymbols (Mono.CecilX.ModuleDefinition module, Mono.CecilX.ReaderParameters parameters) [0x00032] in <9a2bc2dadc3549b3bfc74bb584d58989>:0 
+  at Mono.CecilX.ModuleReader.CreateModule (Mono.CecilX.PE.Image image, Mono.CecilX.ReaderParameters parameters) [0x00081] in <9a2bc2dadc3549b3bfc74bb584d58989>:0 
+  at Mono.CecilX.ModuleDefinition.ReadModule (Mono.Disposable`1[T] stream, System.String fileName, Mono.CecilX.ReaderParameters parameters) [0x0000d] in <9a2bc2dadc3549b3bfc74bb584d58989>:0 
+  at Mono.CecilX.ModuleDefinition.ReadModule (System.String fileName, Mono.CecilX.ReaderParameters parameters) [0x0006c] in <9a2bc2dadc3549b3bfc74bb584d58989>:0 
+  at Mono.CecilX.AssemblyDefinition.ReadAssembly (System.String fileName, Mono.CecilX.ReaderParameters parameters) [0x00000] in <9a2bc2dadc3549b3bfc74bb584d58989>:0 
+  at Mirror.Weaver.Weaver.Weave (System.String assName, System.Collections.Generic.IEnumerable`1[T] dependencies) [0x00021] in <c715fb18b7b647039b01314727a4f271>:0 
+  at Mirror.Weaver.Weaver.WeaveAssembly (System.String assembly, System.Collections.Generic.IEnumerable`1[T] dependencies) [0x00006] in <c715fb18b7b647039b01314727a4f271>:0 
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+Mirror.Weaver.CompilationFinishedHook:HandleError (string)
+Mirror.Weaver.Weaver:WeaveAssembly (string,System.Collections.Generic.IEnumerable`1<string>)
+Mirror.Weaver.CompilationFinishedHook:OnCompilationFinished (string,UnityEditor.Compilation.CompilerMessage[])
+Mirror.Weaver.CompilationFinishedHook:WeaveExistingAssemblies ()
+Mirror.Weaver.CompilationFinishedHook:OnInitializeOnLoad ()
+
+Weaving failed for: Library/ScriptAssemblies/Mirror.CompilerSymbols.dll
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+Mirror.Weaver.CompilationFinishedHook:OnCompilationFinished (string,UnityEditor.Compilation.CompilerMessage[])
+Mirror.Weaver.CompilationFinishedHook:WeaveExistingAssemblies ()
+Mirror.Weaver.CompilationFinishedHook:OnInitializeOnLoad ()
+
 Mono: successfully reloaded assembly
-- Completed reload, in  1.129 seconds
+- Completed reload, in  2.278 seconds
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.06 seconds
-Refreshing native plugins compatible for Editor in 0.20 ms, found 0 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.09 seconds
+Refreshing native plugins compatible for Editor in 0.50 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1115 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 57.1 MB.
-System memory in use after: 57.2 MB.
+Unloading 1392 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 65.2 MB.
+System memory in use after: 65.2 MB.
 
-Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 1557.
-Total: 2.680000 ms (FindLiveObjects: 0.205800 ms CreateObjectMapping: 0.070200 ms MarkObjects: 2.283300 ms  DeleteObjects: 0.119200 ms)
-
-========================================================================
-Received Import Request.
-  path: Assets/Scenes
-  artifactKey: Guid(5ce77aeb48683a540a6e8b0f80846648) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes using Guid(5ce77aeb48683a540a6e8b0f80846648) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e0f1defe06a2e1ee7fedfe08128fafd3') in 0.007574 seconds
-  Import took 0.010388 seconds .
+Unloading 15 unused Assets to reduce memory usage. Loaded Objects now: 1829.
+Total: 2.522100 ms (FindLiveObjects: 0.244300 ms CreateObjectMapping: 0.062500 ms MarkObjects: 2.126900 ms  DeleteObjects: 0.086800 ms)
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000293 seconds.
-  path: Assets/Scenes/SampleScene.unity
-  artifactKey: Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/SampleScene.unity using Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '85059f4f9e1a832ed95adaa0d25c5c4c') in 0.018776 seconds
-  Import took 0.021082 seconds .
+  path: Assets/Mirror/Components
+  artifactKey: Guid(9bee879fbc8ef4b1a9a9f7088bfbf726) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Mirror/Components using Guid(9bee879fbc8ef4b1a9a9f7088bfbf726) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2d003b2cb27af3cc7699ab6460a07829') in 0.005853 seconds
+  Import took 0.008337 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 9.146721 seconds.
-  path: Assets/Scenes/Preload.unity
-  artifactKey: Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Preload.unity using Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c9a264456da40b2b5795c427bed3d825') in 0.007466 seconds
-  Import took 0.010020 seconds .
+  Time since last request: 0.000225 seconds.
+  path: Assets/Mirror/Editor
+  artifactKey: Guid(2539267b6934a4026a505690a1e1eda2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Mirror/Editor using Guid(2539267b6934a4026a505690a1e1eda2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e4b841499103d56e72ec64fb6d168976') in 0.002721 seconds
+  Import took 0.004959 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 26.820106 seconds.
-  path: Assets
-  artifactKey: Guid(00000000000000001000000000000000) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets using Guid(00000000000000001000000000000000) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '42d402b061de3733987d63b9cc3b64de') in 0.004448 seconds
-  Import took 0.006594 seconds .
+  Time since last request: 0.000169 seconds.
+  path: Assets/Mirror/Examples
+  artifactKey: Guid(a08b1f591326642d1b140fc818c9c6b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Mirror/Examples using Guid(a08b1f591326642d1b140fc818c9c6b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '82ebc1b5038e74b5113834b6cd7486aa') in 0.002677 seconds
+  Import took 0.004694 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 11.576130 seconds.
-  path: Assets/Resources
-  artifactKey: Guid(8c5bbc569d8d0674a8a467fd656ccd3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources using Guid(8c5bbc569d8d0674a8a467fd656ccd3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '198093597b099c92c31edb1a0c759116') in 0.007312 seconds
-  Import took 0.009916 seconds .
+  Time since last request: 0.000204 seconds.
+  path: Assets/Mirror/Icon
+  artifactKey: Guid(b5f1356ad059a1243910a4e82cd68c5f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Mirror/Icon using Guid(b5f1356ad059a1243910a4e82cd68c5f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cae584b35face2e371b4af258856a298') in 0.002960 seconds
+  Import took 0.005506 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 7.386531 seconds.
-  path: Assets/Scripts
-  artifactKey: Guid(e01c2423623100246b79d3b6b4547b71) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts using Guid(e01c2423623100246b79d3b6b4547b71) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3aace3b21323fc83333afb671c380075') in 0.007550 seconds
-  Import took 0.010090 seconds .
+  Time since last request: 0.000201 seconds.
+  path: Assets/Mirror/Authenticators
+  artifactKey: Guid(1b2f9d254154cd942ba40b06b869b8f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Mirror/Authenticators using Guid(1b2f9d254154cd942ba40b06b869b8f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '31c8ebace0db50d4f2f858c5e792c250') in 0.003094 seconds
+  Import took 0.005511 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 7.666751 seconds.
-  path: Assets/Prefabs
-  artifactKey: Guid(81741c3a33a28554b906aa528ec34b1f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs using Guid(81741c3a33a28554b906aa528ec34b1f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2ca2038181c12539bcdd8719891ffed2') in 0.006971 seconds
-  Import took 0.009878 seconds .
+  Time since last request: 0.000176 seconds.
+  path: Assets/Mirror/Examples/Discovery
+  artifactKey: Guid(450d6133608b04c57a6ebd6830d455fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Mirror/Examples/Discovery using Guid(450d6133608b04c57a6ebd6830d455fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '43c4335de2b7b4bba441e564d9866ec6') in 0.003036 seconds
+  Import took 0.005135 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000198 seconds.
+  path: Assets/Mirror/CompilerSymbols
+  artifactKey: Guid(1f8b918bcd89f5c488b06f5574f34760) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Mirror/CompilerSymbols using Guid(1f8b918bcd89f5c488b06f5574f34760) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7d8d3d65ec7bac5549dc32740d86aec4') in 0.002950 seconds
+  Import took 0.005200 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000171 seconds.
+  path: Assets/Mirror/Examples/Mirror.Examples.asmdef
+  artifactKey: Guid(fecf25954bb196642ab50657689761d6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Mirror/Examples/Mirror.Examples.asmdef using Guid(fecf25954bb196642ab50657689761d6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c34afc0d4832d076e2c28d6ebc8c53a1') in 0.069089 seconds
+  Import took 0.071319 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000179 seconds.
+  path: Assets/Mirror/Examples/AdditiveScenes
+  artifactKey: Guid(b84b2a39b3027c747b21ad714a439214) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Mirror/Examples/AdditiveScenes using Guid(b84b2a39b3027c747b21ad714a439214) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7daa9c71a3f225b81a3378f57fd96968') in 0.003148 seconds
+  Import took 0.005494 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.675845 seconds.
+  path: Assets/Mirror/Examples/Chat
+  artifactKey: Guid(92165d23a248449f58d0be75d794a127) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Mirror/Examples/Chat using Guid(92165d23a248449f58d0be75d794a127) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4730f1f3664576bee276467df20f32c4') in 0.002983 seconds
+  Import took 0.005257 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.621463 seconds.
+  path: Assets/Mirror/Examples/Pong
+  artifactKey: Guid(2220cb06641bd40be8c8330b3b4dd0ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Mirror/Examples/Pong using Guid(2220cb06641bd40be8c8330b3b4dd0ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5d5f959126a7c7a8ff60b1bb32ed4a9c') in 0.002743 seconds
+  Import took 0.005006 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.877429 seconds.
+  path: Assets/Mirror/Examples/Pong/Scenes
+  artifactKey: Guid(00c56c45628954f44aa4d944cbd9bfca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Mirror/Examples/Pong/Scenes using Guid(00c56c45628954f44aa4d944cbd9bfca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cd8e26e21b8038abd4276f55b0bd4d55') in 0.002673 seconds
+  Import took 0.004963 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.498955 seconds.
+  path: Assets/Mirror/Examples/Pong/Scenes/Scene.unity
+  artifactKey: Guid(89a84548859e3b643b4fb27984dc2b0d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Mirror/Examples/Pong/Scenes/Scene.unity using Guid(89a84548859e3b643b4fb27984dc2b0d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a4b5ef311417f1957bb47de7d2ba1ebc') in 0.011773 seconds
+  Import took 0.014626 seconds .
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.003549 seconds.
+Registered in 0.003867 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.47 ms, found 0 plugins.
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.29 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Failed to find Mirror runtime assembly
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogError (object)
-Mirror.Weaver.CompilationFinishedHook:OnCompilationFinished (string,UnityEditor.Compilation.CompilerMessage[]) (at Assets/Mirror/Editor/Weaver/CompilationFinishedHook.cs:116)
-Mirror.Weaver.CompilationFinishedHook:WeaveExistingAssemblies () (at Assets/Mirror/Editor/Weaver/CompilationFinishedHook.cs:62)
-Mirror.Weaver.CompilationFinishedHook:OnInitializeOnLoad () (at Assets/Mirror/Editor/Weaver/CompilationFinishedHook.cs:52)
-
-(Filename: Assets/Mirror/Editor/Weaver/CompilationFinishedHook.cs Line: 116)
-
-Failed to find Mirror runtime assembly
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogError (object)
-Mirror.Weaver.CompilationFinishedHook:OnCompilationFinished (string,UnityEditor.Compilation.CompilerMessage[]) (at Assets/Mirror/Editor/Weaver/CompilationFinishedHook.cs:116)
-Mirror.Weaver.CompilationFinishedHook:WeaveExistingAssemblies () (at Assets/Mirror/Editor/Weaver/CompilationFinishedHook.cs:62)
-Mirror.Weaver.CompilationFinishedHook:OnInitializeOnLoad () (at Assets/Mirror/Editor/Weaver/CompilationFinishedHook.cs:52)
-
-(Filename: Assets/Mirror/Editor/Weaver/CompilationFinishedHook.cs Line: 116)
-
-[ScriptCompilation] NOT recompiling all scripts because this is an import worker process. Reason to compile was: Define symbols changed
 Mono: successfully reloaded assembly
-- Completed reload, in  1.821 seconds
+- Completed reload, in  0.975 seconds
 Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.43 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 0.29 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 1387 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 65.0 MB.
-System memory in use after: 65.0 MB.
+System memory in use before: 65.1 MB.
+System memory in use after: 65.2 MB.
 
 Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 1832.
-Total: 2.733200 ms (FindLiveObjects: 0.222400 ms CreateObjectMapping: 0.086900 ms MarkObjects: 2.348900 ms  DeleteObjects: 0.073300 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 386.230583 seconds.
-  path: Assets/ScriptTemplates
-  artifactKey: Guid(8c00361129d75a941a732ef88e326a4f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ScriptTemplates using Guid(8c00361129d75a941a732ef88e326a4f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f2089b59c468190abc102859f1c91437') in 0.006124 seconds
-  Import took 0.008343 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.003402 seconds.
-  path: Assets/ScriptTemplates
-  artifactKey: Guid(8c00361129d75a941a732ef88e326a4f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ScriptTemplates using Guid(8c00361129d75a941a732ef88e326a4f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f2089b59c468190abc102859f1c91437') in 0.004000 seconds
-  Import took 0.007016 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 4.569986 seconds.
-  path: Assets/Mirror
-  artifactKey: Guid(5cf8eb36be0834b3da408c694a41cb88) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Mirror using Guid(5cf8eb36be0834b3da408c694a41cb88) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '54883f6e3b61bac95ef1bd10290fd14f') in 0.005419 seconds
-  Import took 0.009086 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 7.184457 seconds.
-  path: Assets/Mirror/Runtime
-  artifactKey: Guid(9f4328ccc5f724e45afe2215d275b5d5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Mirror/Runtime using Guid(9f4328ccc5f724e45afe2215d275b5d5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a94bfc7003d09562768f54caa1ecaf7d') in 0.005338 seconds
-  Import took 0.007754 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.126432 seconds.
-  path: Assets/Mirror/Runtime/Mirror.asmdef
-  artifactKey: Guid(30817c1a0e6d646d99c048fc403f5979) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Mirror/Runtime/Mirror.asmdef using Guid(30817c1a0e6d646d99c048fc403f5979) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3310985c5bab7f3fbe8914454c0e0dee') in 0.054796 seconds
-  Import took 0.058155 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 5.413448 seconds.
-  path: Assets/Mirror/Readme.txt
-  artifactKey: Guid(f6d84e019c68446f28415a923b460a03) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Mirror/Readme.txt using Guid(f6d84e019c68446f28415a923b460a03) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4d956e2522642fb626cb0e4429818019') in 0.025293 seconds
-  Import took 0.027944 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.001203 seconds.
-  path: Assets/Mirror/Readme.txt
-  artifactKey: Guid(f6d84e019c68446f28415a923b460a03) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Mirror/Readme.txt using Guid(f6d84e019c68446f28415a923b460a03) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4d956e2522642fb626cb0e4429818019') in 0.005352 seconds
-  Import took 0.008934 seconds .
+Total: 1.729500 ms (FindLiveObjects: 0.136300 ms CreateObjectMapping: 0.036200 ms MarkObjects: 1.501600 ms  DeleteObjects: 0.054600 ms)
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.004385 seconds.
+Registered in 0.005138 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.48 ms, found 0 plugins.
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.30 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-[ScriptCompilation] NOT recompiling all scripts because this is an import worker process. Reason to compile was: Define symbols changed
 Mono: successfully reloaded assembly
-- Completed reload, in  1.483 seconds
+- Completed reload, in  0.950 seconds
 Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.43 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 0.30 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 1387 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 65.0 MB.
-System memory in use after: 65.1 MB.
+System memory in use before: 65.2 MB.
+System memory in use after: 65.3 MB.
 
 Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 1835.
-Total: 1.980700 ms (FindLiveObjects: 0.213500 ms CreateObjectMapping: 0.061100 ms MarkObjects: 1.623600 ms  DeleteObjects: 0.081000 ms)
+Total: 1.766000 ms (FindLiveObjects: 0.142100 ms CreateObjectMapping: 0.035500 ms MarkObjects: 1.537500 ms  DeleteObjects: 0.049000 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.003494 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.39 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.963 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.29 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1387 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 65.2 MB.
+System memory in use after: 65.3 MB.
+
+Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 1838.
+Total: 1.845300 ms (FindLiveObjects: 0.190500 ms CreateObjectMapping: 0.038400 ms MarkObjects: 1.556800 ms  DeleteObjects: 0.058300 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.003584 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.33 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.955 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.34 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1387 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 65.2 MB.
+System memory in use after: 65.3 MB.
+
+Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 1841.
+Total: 2.077700 ms (FindLiveObjects: 0.205800 ms CreateObjectMapping: 0.044600 ms MarkObjects: 1.766400 ms  DeleteObjects: 0.059100 ms)
+
+========================================================================
+Received Prepare
+Refreshing native plugins compatible for Editor in 2.73 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 8 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 37.5 MB.
+System memory in use after: 37.6 MB.
+
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 1841.
+Total: 1.723700 ms (FindLiveObjects: 0.145200 ms CreateObjectMapping: 0.033700 ms MarkObjects: 1.499900 ms  DeleteObjects: 0.044200 ms)
+
+========================================================================
+Received Prepare
+Refreshing native plugins compatible for Editor in 2.52 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 8 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 37.5 MB.
+System memory in use after: 37.6 MB.
+
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 1841.
+Total: 1.976900 ms (FindLiveObjects: 0.143700 ms CreateObjectMapping: 0.034100 ms MarkObjects: 1.745700 ms  DeleteObjects: 0.052200 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.004042 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.49 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.104 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.46 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1387 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 65.2 MB.
+System memory in use after: 65.3 MB.
+
+Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 1844.
+Total: 2.480300 ms (FindLiveObjects: 0.201600 ms CreateObjectMapping: 0.045400 ms MarkObjects: 2.172500 ms  DeleteObjects: 0.059100 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 572.674415 seconds.
+  path: Assets/Mirror/Examples/Pong/PhysicsMaterials
+  artifactKey: Guid(7f122364b93b24938b3f50539de4d746) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Mirror/Examples/Pong/PhysicsMaterials using Guid(7f122364b93b24938b3f50539de4d746) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5cba37c52f475f787bb6bed72ca29d41') in 0.005765 seconds
+  Import took 0.008176 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.008413 seconds.
+  path: Assets/Mirror/Examples/Pong/PhysicsMaterials
+  artifactKey: Guid(7f122364b93b24938b3f50539de4d746) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Mirror/Examples/Pong/PhysicsMaterials using Guid(7f122364b93b24938b3f50539de4d746) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5cba37c52f475f787bb6bed72ca29d41') in 0.002611 seconds
+  Import took 0.004868 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.279787 seconds.
+  path: Assets/Mirror/Examples/Pong/Prefabs
+  artifactKey: Guid(db1c7e1499ee84bfba33fa7f2cb1bc57) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Mirror/Examples/Pong/Prefabs using Guid(db1c7e1499ee84bfba33fa7f2cb1bc57) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4329f08f48024070d0a2c1731fc5c20c') in 0.002828 seconds
+  Import took 0.005099 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.099679 seconds.
+  path: Assets/Mirror/Examples/Pong/Prefabs/Ball.prefab
+  artifactKey: Guid(5f7a7f34494ed40268eff49dbf9168bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Mirror/Examples/Pong/Prefabs/Ball.prefab using Guid(5f7a7f34494ed40268eff49dbf9168bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '665f2471c2ce796bd7d1439970db8f32') in 0.096320 seconds
+  Import took 0.098963 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000215 seconds.
+  path: Assets/Mirror/Examples/Pong/Prefabs/Racket.prefab
+  artifactKey: Guid(b1651eaf8c7564a1c86031dfbb8a7b28) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Mirror/Examples/Pong/Prefabs/Racket.prefab using Guid(b1651eaf8c7564a1c86031dfbb8a7b28) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'acc7be55c7b4af048d0d479c99bc2d73') in 0.010599 seconds
+  Import took 0.013034 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 123.093821 seconds.
+  path: Assets/Mirror/Examples/Pong/Scripts
+  artifactKey: Guid(55e7bd9b7212f4318909cbca3bdb1284) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Mirror/Examples/Pong/Scripts using Guid(55e7bd9b7212f4318909cbca3bdb1284) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '37a2d2cea282fec3ff19d626947ce928') in 0.002644 seconds
+  Import took 0.004942 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000586 seconds.
+  path: Assets/Mirror/Examples/Pong/Scripts
+  artifactKey: Guid(55e7bd9b7212f4318909cbca3bdb1284) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Mirror/Examples/Pong/Scripts using Guid(55e7bd9b7212f4318909cbca3bdb1284) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '37a2d2cea282fec3ff19d626947ce928') in 0.002536 seconds
+  Import took 0.004527 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.084844 seconds.
+  path: Assets/Mirror/Examples/Pong/Scripts/Player.cs
+  artifactKey: Guid(0748c7eda22b19845b9ce0e4d23d1021) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Mirror/Examples/Pong/Scripts/Player.cs using Guid(0748c7eda22b19845b9ce0e4d23d1021) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '72a10fc9611b5f3d8e9f1e8cf89573c4') in 0.054424 seconds
+  Import took 0.056687 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.549417 seconds.
+  path: Assets/Mirror/Examples/Pong/Scripts/NetworkManagerPong.cs
+  artifactKey: Guid(0aa3018bb284840d6a6d0acee29ab098) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Mirror/Examples/Pong/Scripts/NetworkManagerPong.cs using Guid(0aa3018bb284840d6a6d0acee29ab098) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6cbeb3c50a8abd7ab17fa3ddc90b87e4') in 0.003068 seconds
+  Import took 0.005344 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000519 seconds.
+  path: Assets/Mirror/Examples/Pong/Scripts/NetworkManagerPong.cs
+  artifactKey: Guid(0aa3018bb284840d6a6d0acee29ab098) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Mirror/Examples/Pong/Scripts/NetworkManagerPong.cs using Guid(0aa3018bb284840d6a6d0acee29ab098) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6cbeb3c50a8abd7ab17fa3ddc90b87e4') in 0.002835 seconds
+  Import took 0.004941 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.492665 seconds.
+  path: Assets/Mirror/Examples/Pong/Scripts/Ball.cs
+  artifactKey: Guid(38b5c2f743cd8034a8beeebf277c92c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Mirror/Examples/Pong/Scripts/Ball.cs using Guid(38b5c2f743cd8034a8beeebf277c92c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8384c21d39975093e9294701594d2c75') in 0.002568 seconds
+  Import took 0.004902 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.005643 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 7.09 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.263 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.42 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1387 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 68.4 MB.
+System memory in use after: 68.4 MB.
+
+Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 1854.
+Total: 1.826800 ms (FindLiveObjects: 0.165100 ms CreateObjectMapping: 0.046800 ms MarkObjects: 1.561600 ms  DeleteObjects: 0.051900 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.007137 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.35 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.947 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.28 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1387 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 68.4 MB.
+System memory in use after: 68.4 MB.
+
+Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 1857.
+Total: 1.779200 ms (FindLiveObjects: 0.144700 ms CreateObjectMapping: 0.034200 ms MarkObjects: 1.535200 ms  DeleteObjects: 0.064200 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.013301 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.41 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.014 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.30 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1387 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 68.4 MB.
+System memory in use after: 68.4 MB.
+
+Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 1860.
+Total: 2.091500 ms (FindLiveObjects: 0.190500 ms CreateObjectMapping: 0.044600 ms MarkObjects: 1.800700 ms  DeleteObjects: 0.054400 ms)
+
+========================================================================
+Received Prepare
+Refreshing native plugins compatible for Editor in 2.57 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 8 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 40.7 MB.
+System memory in use after: 40.8 MB.
+
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 1860.
+Total: 1.767800 ms (FindLiveObjects: 0.153000 ms CreateObjectMapping: 0.034000 ms MarkObjects: 1.530200 ms  DeleteObjects: 0.049900 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.008669 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.31 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.074 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.32 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1387 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 68.4 MB.
+System memory in use after: 68.4 MB.
+
+Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 1863.
+Total: 1.863500 ms (FindLiveObjects: 0.180400 ms CreateObjectMapping: 0.036000 ms MarkObjects: 1.589900 ms  DeleteObjects: 0.055800 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.003531 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.33 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.957 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.29 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1387 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 68.4 MB.
+System memory in use after: 68.5 MB.
+
+Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 1866.
+Total: 1.709400 ms (FindLiveObjects: 0.163100 ms CreateObjectMapping: 0.046000 ms MarkObjects: 1.448500 ms  DeleteObjects: 0.050800 ms)
+
+========================================================================
+Received Prepare
+Refreshing native plugins compatible for Editor in 2.46 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 8 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 40.7 MB.
+System memory in use after: 40.8 MB.
+
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 1866.
+Total: 1.668600 ms (FindLiveObjects: 0.137100 ms CreateObjectMapping: 0.032100 ms MarkObjects: 1.456500 ms  DeleteObjects: 0.042200 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 9967.415194 seconds.
+  path: Assets/Mirror/Examples/Pong/PhysicsMaterials/BallMaterial.physicsMaterial2D
+  artifactKey: Guid(97a3e4cddb8635c4eba1265f44d106bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Mirror/Examples/Pong/PhysicsMaterials/BallMaterial.physicsMaterial2D using Guid(97a3e4cddb8635c4eba1265f44d106bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e13a3f61185732859d41b6be1c380a28') in 0.017073 seconds
+  Import took 0.020295 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 9.018241 seconds.
+  path: Assets/Mirror/Examples/Pong/Sprites
+  artifactKey: Guid(9d39b68545c2e43cfa4a37f6703a983b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Mirror/Examples/Pong/Sprites using Guid(9d39b68545c2e43cfa4a37f6703a983b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e6df7e86bd5b077db6f4abbe6e53af4e') in 0.003186 seconds
+  Import took 0.005501 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.081943 seconds.
+  path: Assets/Mirror/Examples/Pong/Sprites/Ball.png
+  artifactKey: Guid(4b66f21097323d44ab40669b2fb9c53d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Mirror/Examples/Pong/Sprites/Ball.png using Guid(4b66f21097323d44ab40669b2fb9c53d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1c40051d2b79738f4a3fc094567dcea2') in 0.159370 seconds
+  Import took 0.162045 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000189 seconds.
+  path: Assets/Mirror/Examples/Pong/Sprites/Racket.png
+  artifactKey: Guid(619ccff3ba2f2a04f9ddd19c264a1ecd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Mirror/Examples/Pong/Sprites/Racket.png using Guid(619ccff3ba2f2a04f9ddd19c264a1ecd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '19b06254c959e7a893b727d84e2930b9') in 0.008467 seconds
+  Import took 0.010798 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000223 seconds.
+  path: Assets/Mirror/Examples/Pong/Sprites/DottedLine.png
+  artifactKey: Guid(1b5c0b514d8b2d24091d5aec516fe860) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Mirror/Examples/Pong/Sprites/DottedLine.png using Guid(1b5c0b514d8b2d24091d5aec516fe860) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3e9d93c8e08adaeffd419a4ffdf0144e') in 0.010194 seconds
+  Import took 0.012900 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000240 seconds.
+  path: Assets/Mirror/Examples/Pong/Sprites/WallVertical.png
+  artifactKey: Guid(0f2833a292a197d4fb0385a8efa1dc91) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Mirror/Examples/Pong/Sprites/WallVertical.png using Guid(0f2833a292a197d4fb0385a8efa1dc91) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8b9731377d812321846fc69dfb348f47') in 0.010422 seconds
+  Import took 0.012860 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000235 seconds.
+  path: Assets/Mirror/Examples/Pong/Sprites/WallHorizontal.png
+  artifactKey: Guid(b931587800e08c54aa8dbbd6c15c894f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Mirror/Examples/Pong/Sprites/WallHorizontal.png using Guid(b931587800e08c54aa8dbbd6c15c894f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8a8ab41e27498c3fcd7b195cc9fa448f') in 0.009722 seconds
+  Import took 0.012701 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.003760 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.31 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.998 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.53 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1387 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 68.4 MB.
+System memory in use after: 68.5 MB.
+
+Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 1881.
+Total: 1.904600 ms (FindLiveObjects: 0.179500 ms CreateObjectMapping: 0.036100 ms MarkObjects: 1.625800 ms  DeleteObjects: 0.061900 ms)
 
 AssetImportWorkerClient::OnTransportError - code=2 error=End of file
