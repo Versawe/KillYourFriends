@@ -3,8 +3,10 @@ ScriptsOnlyBuild:
     Assembly-CSharp.dll:
     - BulletDespawn
     - PlayerTestScript
+    - SimpleMoveTest
     Mirror.Components.dll:
     - Mirror.NetworkTransform
+    - Mirror.NetworkTransformChild
     Mirror.dll:
     - Mirror.NetworkIdentity
     - Mirror.NetworkManager
@@ -41,6 +43,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 65
       Script: {instanceID: 0}
+    - Class: 81
+      Script: {instanceID: 0}
     - Class: 89
       Script: {instanceID: 0}
     - Class: 104
@@ -48,21 +52,25 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1442}
+      Script: {instanceID: 1446}
     - Class: 114
-      Script: {instanceID: 1736}
+      Script: {instanceID: 1508}
     - Class: 114
-      Script: {instanceID: 2278}
+      Script: {instanceID: 1740}
     - Class: 114
-      Script: {instanceID: 2374}
+      Script: {instanceID: 2282}
     - Class: 114
-      Script: {instanceID: 2794}
+      Script: {instanceID: 2378}
     - Class: 114
-      Script: {instanceID: 3670}
+      Script: {instanceID: 2798}
     - Class: 114
-      Script: {instanceID: 3796}
+      Script: {instanceID: 3674}
     - Class: 114
-      Script: {instanceID: 3900}
+      Script: {instanceID: 3800}
+    - Class: 114
+      Script: {instanceID: 3902}
+    - Class: 114
+      Script: {instanceID: 17484}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 135
@@ -116,7 +124,7 @@ ScriptsOnlyBuild:
       serializedVersion: 2
       Hash: e87f50864f8a979f1228e8c69bd62658
     assemblyName: Mirror.Examples.dll
-    namespaceName: 
+    namespaceName: Mirror.Examples.Pong
     className: Ball
   - hash:
       serializedVersion: 2
@@ -464,7 +472,7 @@ ScriptsOnlyBuild:
       serializedVersion: 2
       Hash: 4e0c63e49a9e2ef70afb47e3a0e28bc2
     assemblyName: Mirror.Examples.dll
-    namespaceName: 
+    namespaceName: Mirror.Examples.Pong
     className: NetworkManagerPong
   - hash:
       serializedVersion: 2
@@ -602,7 +610,7 @@ ScriptsOnlyBuild:
       serializedVersion: 2
       Hash: e87f50864f8a979f1228e8c69bd62658
     assemblyName: Mirror.Examples.dll
-    namespaceName: 
+    namespaceName: Mirror.Examples.Pong
     className: Player
   - hash:
       serializedVersion: 2
@@ -982,6 +990,12 @@ ScriptsOnlyBuild:
     assemblyName: Mirror.Examples.dll
     namespaceName: Mirror.Examples.NetworkRoom
     className: NetworkRoomPlayerExt
+  - hash:
+      serializedVersion: 2
+      Hash: 6fd2bb55b3ee5edb6040a1c5bccd0e07
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: SimpleMoveTest
   platform: 19
   scenePathNames:
   - Assets/Scenes/Test.unity

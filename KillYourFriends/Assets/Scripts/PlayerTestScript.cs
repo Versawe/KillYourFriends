@@ -1,5 +1,4 @@
 ﻿using Mirror;
-using Telepathy;
 using UnityEngine;
 
 public class PlayerTestScript : NetworkBehaviour
@@ -38,16 +37,26 @@ public class PlayerTestScript : NetworkBehaviour
     private float delayShot = 0.25f;
     private bool waitingDelay = false;
 
+    public override void OnStartClient()
+    {
+        base.OnStartClient();
+        cc = GetComponentInChildren<CharacterController>();
+        CameraMain = GetComponentInChildren<Camera>();
+        //Cursor.lockState = CursorLockMode.Locked;
+        StartRotationSnout = Snout.transform.rotation;
+        if (isLocalPlayer) return;
+
+        CameraMain.enabled = false;
+        cc.enabled = false;
+    }
     // Start is called before the first frame update
     void Start()
     {
-        if (!isLocalPlayer) return;
-        cc = GetComponentInChildren<CharacterController>();
-
-        CameraMain = Camera.main;
-        Cursor.lockState = CursorLockMode.Locked;
-
-        StartRotationSnout = Snout.transform.rotation;
+        if (isLocalPlayer) 
+        {
+            print(netId);
+            print(netIdentity);
+        }
     }
 
     // Update is called once per frame
@@ -65,8 +74,16 @@ public class PlayerTestScript : NetworkBehaviour
 
         RotateCamera();
 
-        if (Input.GetButtonDown("Fire1") && !waitingDelay) CmdShootBullet();
+        if (Input.GetButtonDown("Fire1") && !waitingDelay) 
+        {
+            CmdShootBullet();
+            waitingDelay = true;
+        }   
+    }
 
+    private void FixedUpdate()
+    {
+        if (!isLocalPlayer) return;
         //shot delay
         if (waitingDelay)
         {
@@ -148,7 +165,5 @@ public class PlayerTestScript : NetworkBehaviour
     {
         GameObject bullet = Instantiate(bulletPrefab, SnoutTip.position, SnoutTip.rotation);
         NetworkServer.Spawn(bullet);
-
-        waitingDelay = true;
     }
 }
