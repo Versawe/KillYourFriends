@@ -1,21 +1,27 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using Mirror;
 
-public class BulletDespawn : MonoBehaviour
+public class BulletDespawn : NetworkBehaviour
 {
     // Start is called before the first frame update
     private float DespawnTime = 5f;
-    void Start()
+    private float thrust = 50f;
+    Rigidbody rig;
+
+    public override void OnStartServer()
     {
-     
+        Invoke(nameof(DestroySelf), DespawnTime);
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Start()
     {
-        DespawnTime -= Time.deltaTime;
+        rig = GetComponent<Rigidbody>();
+        rig.AddForce(transform.forward * thrust, ForceMode.Impulse);
+    }
 
-        if(DespawnTime <= 0) Destroy(gameObject);
+    [Server]
+    void DestroySelf() 
+    {
+        NetworkServer.Destroy(gameObject);
     }
 }

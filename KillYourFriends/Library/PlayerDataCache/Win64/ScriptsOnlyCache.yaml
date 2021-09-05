@@ -1,14 +1,15 @@
 ScriptsOnlyBuild:
   usedScripts:
+    Assembly-CSharp.dll:
+    - BulletDespawn
+    - PlayerTestScript
     Mirror.Components.dll:
     - Mirror.NetworkTransform
-    Mirror.Examples.dll:
-    - Ball
-    - NetworkManagerPong
-    - Player
     Mirror.dll:
     - Mirror.NetworkIdentity
+    - Mirror.NetworkManager
     - Mirror.NetworkManagerHUD
+    - Mirror.NetworkStartPosition
     - kcp2k.KcpTransport
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
@@ -17,7 +18,7 @@ ScriptsOnlyBuild:
     - UnityEditor.TestTools.TestRunner.TestListCacheData
     - UnityEditor.TestTools.TestRunner.TestRun.TestJobDataHolder
   sceneClasses:
-    Assets/Mirror/Examples/Pong/Scenes/Scene.unity:
+    Assets/Scenes/Test.unity:
     - Class: 1
       Script: {instanceID: 0}
     - Class: 4
@@ -26,49 +27,53 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 21
       Script: {instanceID: 0}
+    - Class: 23
+      Script: {instanceID: 0}
     - Class: 28
+      Script: {instanceID: 0}
+    - Class: 33
+      Script: {instanceID: 0}
+    - Class: 43
       Script: {instanceID: 0}
     - Class: 48
       Script: {instanceID: 0}
-    - Class: 50
+    - Class: 54
       Script: {instanceID: 0}
-    - Class: 61
+    - Class: 65
       Script: {instanceID: 0}
-    - Class: 62
-      Script: {instanceID: 0}
-    - Class: 81
+    - Class: 89
       Script: {instanceID: 0}
     - Class: 104
+      Script: {instanceID: 0}
+    - Class: 108
       Script: {instanceID: 0}
     - Class: 114
       Script: {instanceID: 1442}
     - Class: 114
-      Script: {instanceID: 1486}
+      Script: {instanceID: 1736}
     - Class: 114
-      Script: {instanceID: 2610}
+      Script: {instanceID: 2278}
     - Class: 114
-      Script: {instanceID: 3020}
+      Script: {instanceID: 2374}
     - Class: 114
-      Script: {instanceID: 3664}
+      Script: {instanceID: 2794}
     - Class: 114
-      Script: {instanceID: 3790}
+      Script: {instanceID: 3670}
     - Class: 114
-      Script: {instanceID: 3892}
+      Script: {instanceID: 3796}
+    - Class: 114
+      Script: {instanceID: 3900}
     - Class: 115
       Script: {instanceID: 0}
-    - Class: 124
+    - Class: 135
+      Script: {instanceID: 0}
+    - Class: 136
+      Script: {instanceID: 0}
+    - Class: 143
       Script: {instanceID: 0}
     - Class: 157
       Script: {instanceID: 0}
     - Class: 196
-      Script: {instanceID: 0}
-    - Class: 212
-      Script: {instanceID: 0}
-    - Class: 213
-      Script: {instanceID: 0}
-    - Class: 258
-      Script: {instanceID: 0}
-    - Class: 850595691
       Script: {instanceID: 0}
   scriptHashData:
   - hash:
@@ -235,6 +240,12 @@ ScriptsOnlyBuild:
     className: RandomColor
   - hash:
       serializedVersion: 2
+      Hash: a20c524fdda301c14eea023d3e10339a
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: PlayerTestScript
+  - hash:
+      serializedVersion: 2
       Hash: 93827904d1237a324c550ba2fe498ea8
     assemblyName: Mirror.Authenticators.dll
     namespaceName: Mirror.Authenticators
@@ -329,6 +340,12 @@ ScriptsOnlyBuild:
     assemblyName: SimpleWebTransport.dll
     namespaceName: Mirror.SimpleWeb
     className: SimpleWebTransport
+  - hash:
+      serializedVersion: 2
+      Hash: 6fd2bb55b3ee5edb6040a1c5bccd0e07
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: BulletDespawn
   - hash:
       serializedVersion: 2
       Hash: cf9f5cf2c3145a37ac07f00e50e460f9
@@ -967,5 +984,5 @@ ScriptsOnlyBuild:
     className: NetworkRoomPlayerExt
   platform: 19
   scenePathNames:
-  - Assets/Mirror/Examples/Pong/Scenes/Scene.unity
+  - Assets/Scenes/Test.unity
   playerPath: C:/Users/Eric/Documents/KillYourFriends/KillYourFriends/Builds/KillYourFriends.exe
