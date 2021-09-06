@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.UIElements;
 
 namespace Mirror.Examples.Tanks
 {
@@ -23,19 +24,24 @@ namespace Mirror.Examples.Tanks
             if (!isLocalPlayer) return;
 
             // rotate
-            float horizontal = Input.GetAxis("Horizontal");
+            /*float horizontal = Input.GetAxis("Horizontal");
             transform.Rotate(0, horizontal * rotationSpeed * Time.deltaTime, 0);
 
             // move
             float vertical = Input.GetAxis("Vertical");
             Vector3 forward = transform.TransformDirection(Vector3.forward);
             agent.velocity = forward * Mathf.Max(vertical, 0) * agent.speed;
-            animator.SetBool("Moving", agent.velocity != Vector3.zero);
+            animator.SetBool("Moving", agent.velocity != Vector3.zero);*/
 
             // shoot
             if (Input.GetKeyDown(shootKey))
             {
                 CmdFire();
+            }
+
+            if (Input.GetButtonDown("Fire1")) 
+            {
+                CmdMoveUnit();
             }
         }
 
@@ -48,11 +54,31 @@ namespace Mirror.Examples.Tanks
             RpcOnFire();
         }
 
+        [Command]
+        void CmdMoveUnit()
+        {
+            Ray ray;
+            RaycastHit hit;
+            ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            if (Physics.Raycast(ray, out hit, 100)) 
+            {
+                Vector3 movePoint = hit.point;
+                agent.SetDestination(movePoint);
+                RpcOnMove(movePoint);
+            }
+        }
+
         // this is called on the tank that fired for all observers
         [ClientRpc]
         void RpcOnFire()
         {
             animator.SetTrigger("Shoot");
+        }
+
+        [ClientRpc]
+        void RpcOnMove(Vector3 pos) 
+        {
+            agent.SetDestination(pos);
         }
     }
 }
