@@ -18,6 +18,9 @@ namespace Mirror.Examples.Tanks
         public GameObject projectilePrefab;
         public Transform projectileMount;
 
+        //[SyncVar]
+        public Vector3 currPos;
+
         void Update()
         {
             // movement for local player
@@ -34,14 +37,15 @@ namespace Mirror.Examples.Tanks
             animator.SetBool("Moving", agent.velocity != Vector3.zero);*/
 
             // shoot
-            if (Input.GetKeyDown(shootKey))
+            /*if (Input.GetKeyDown(shootKey))
             {
                 CmdFire();
-            }
+            }*/
 
             if (Input.GetButtonDown("Fire1")) 
             {
-                CmdMoveUnit();
+                if(!isServer) CmdMoveUnit();
+                if (isServer) MoveUnit();
             }
         }
 
@@ -54,6 +58,19 @@ namespace Mirror.Examples.Tanks
             RpcOnFire();
         }
 
+        void MoveUnit()
+        {
+            Ray ray;
+            RaycastHit hit;
+            ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            if (Physics.Raycast(ray, out hit, 100))
+            {
+                //Vector3 movePoint = hit.point;
+                currPos = hit.point;
+                agent.SetDestination(currPos);
+            }
+        }
+
         [Command]
         void CmdMoveUnit()
         {
@@ -62,9 +79,9 @@ namespace Mirror.Examples.Tanks
             ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             if (Physics.Raycast(ray, out hit, 100)) 
             {
-                Vector3 movePoint = hit.point;
-                agent.SetDestination(movePoint);
-                RpcOnMove(movePoint);
+                //Vector3 movePoint = hit.point;
+                currPos = hit.point;
+                agent.SetDestination(currPos);
             }
         }
 
@@ -76,9 +93,17 @@ namespace Mirror.Examples.Tanks
         }
 
         [ClientRpc]
-        void RpcOnMove(Vector3 pos) 
+        void RpcOnMove() 
         {
-            agent.SetDestination(pos);
+            Ray ray;
+            RaycastHit hit;
+            ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            if (Physics.Raycast(ray, out hit, 100))
+            {
+                //Vector3 movePoint = hit.point;
+                currPos = hit.point;
+                agent.SetDestination(currPos);
+            }
         }
     }
 }

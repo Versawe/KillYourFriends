@@ -129,6 +129,7 @@ MonoBehaviour:
   shootKey: 32
   projectilePrefab: {fileID: 5890560936853567077, guid: b7dd46dbf38c643f09e206f9fa4be008, type: 3}
   projectileMount: {fileID: 5718089106632469514}
+  currPos: {x: 0, y: 0, z: 0}
 --- !u!1 &4426914200102054949
 GameObject:
   m_ObjectHideFlags: 0
