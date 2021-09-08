@@ -18,7 +18,7 @@ namespace Mirror.Examples.Tanks
         public GameObject projectilePrefab;
         public Transform projectileMount;
 
-        //[SyncVar]
+        //[SyncVar] public Vector3 currPos;
         public Vector3 currPos;
 
         void Update()
@@ -44,8 +44,11 @@ namespace Mirror.Examples.Tanks
 
             if (Input.GetButtonDown("Fire1")) 
             {
-                if(!isServer) CmdMoveUnit();
-                if (isServer) MoveUnit();
+                if (!isServer) MoveUnit();
+                else 
+                {
+                    MoveServerUnit();
+                }
             }
         }
 
@@ -58,6 +61,28 @@ namespace Mirror.Examples.Tanks
             RpcOnFire();
         }
 
+        [Server]
+        void MoveServerUnit()
+        {
+            Ray ray;
+            RaycastHit hit;
+            ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            if (Physics.Raycast(ray, out hit, 100))
+            {
+                //Vector3 movePoint = hit.point;
+                currPos = hit.point;
+                agent.SetDestination(currPos);
+                RpcMoveServerUnit(currPos, gameObject);
+            }
+        }
+
+        [ClientRpc]
+        void RpcMoveServerUnit(Vector3 movePos, GameObject serverPlayer)
+        {
+            agent.SetDestination(movePos);
+        }
+
+        [Client]
         void MoveUnit()
         {
             Ray ray;
@@ -68,21 +93,14 @@ namespace Mirror.Examples.Tanks
                 //Vector3 movePoint = hit.point;
                 currPos = hit.point;
                 agent.SetDestination(currPos);
+                CmdMoveUnit(currPos, gameObject);
             }
         }
 
         [Command]
-        void CmdMoveUnit()
+        void CmdMoveUnit(Vector3 movePos, GameObject client)
         {
-            Ray ray;
-            RaycastHit hit;
-            ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            if (Physics.Raycast(ray, out hit, 100)) 
-            {
-                //Vector3 movePoint = hit.point;
-                currPos = hit.point;
-                agent.SetDestination(currPos);
-            }
+            agent.SetDestination(movePos);
         }
 
         // this is called on the tank that fired for all observers
@@ -90,20 +108,6 @@ namespace Mirror.Examples.Tanks
         void RpcOnFire()
         {
             animator.SetTrigger("Shoot");
-        }
-
-        [ClientRpc]
-        void RpcOnMove() 
-        {
-            Ray ray;
-            RaycastHit hit;
-            ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            if (Physics.Raycast(ray, out hit, 100))
-            {
-                //Vector3 movePoint = hit.point;
-                currPos = hit.point;
-                agent.SetDestination(currPos);
-            }
         }
     }
 }
