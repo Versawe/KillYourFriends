@@ -47,67 +47,72 @@ namespace Mirror.Examples.Tanks
                 if (!isServer) MoveUnit();
                 else 
                 {
-                    MoveServerUnit();
+                    MoveHostUnit();
                 }
             }
         }
 
-        // this is called on the server
-        [Command]
-        void CmdFire()
-        {
-            GameObject projectile = Instantiate(projectilePrefab, projectileMount.position, transform.rotation);
-            NetworkServer.Spawn(projectile);
-            RpcOnFire();
-        }
-
         [Server]
-        void MoveServerUnit()
+        void MoveHostUnit() //Host moves locally
         {
             Ray ray;
             RaycastHit hit;
             ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             if (Physics.Raycast(ray, out hit, 100))
             {
-                //Vector3 movePoint = hit.point;
                 currPos = hit.point;
                 agent.SetDestination(currPos);
-                RpcMoveServerUnit(currPos, gameObject);
+                RpcMoveHostUnit(currPos, gameObject); //triggers move to send to clients
             }
         }
 
         [ClientRpc]
-        void RpcMoveServerUnit(Vector3 movePos, GameObject serverPlayer)
+        void RpcMoveHostUnit(Vector3 movePos, GameObject serverPlayer) //Sends to clients so they see Host move
         {
             agent.SetDestination(movePos);
         }
 
         [Client]
-        void MoveUnit()
+        void MoveUnit() //Client Moving Locally
         {
             Ray ray;
             RaycastHit hit;
             ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             if (Physics.Raycast(ray, out hit, 100))
             {
-                //Vector3 movePoint = hit.point;
                 currPos = hit.point;
                 agent.SetDestination(currPos);
-                CmdMoveUnit(currPos, gameObject);
+                CmdMoveUnit(currPos, gameObject); //triggers to send this move to Server
             }
         }
 
         [Command]
-        void CmdMoveUnit(Vector3 movePos, GameObject client)
+        void CmdMoveUnit(Vector3 movePos, GameObject client) //Updating Client move to Server
+        {
+            agent.SetDestination(movePos);
+            RpcClientMoveToClients(movePos, gameObject); //should update client's move to other clients connected
+        }
+
+        [ClientRpc]
+        void RpcClientMoveToClients(Vector3 movePos, GameObject client) //This should update the client's move to other client observing 
         {
             agent.SetDestination(movePos);
         }
 
+        // this is called on the server
+        /*[Command]
+        void CmdFire()
+        {
+            GameObject projectile = Instantiate(projectilePrefab, projectileMount.position, transform.rotation);
+            NetworkServer.Spawn(projectile);
+            RpcOnFire();
+        }*/
+
         // this is called on the tank that fired for all observers
-        [ClientRpc]
+        /*[ClientRpc]
         void RpcOnFire()
         {
             animator.SetTrigger("Shoot");
-        }
+        }*/
     }
 }
