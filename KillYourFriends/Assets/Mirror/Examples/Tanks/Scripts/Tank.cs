@@ -62,12 +62,12 @@ namespace Mirror.Examples.Tanks
             {
                 currPos = hit.point;
                 agent.SetDestination(currPos);
-                RpcMoveHostUnit(currPos, gameObject); //triggers move to send to clients
+                UpdateUnitMove(currPos); //triggers move to send to clients
             }
         }
 
         [ClientRpc]
-        void RpcMoveHostUnit(Vector3 movePos, GameObject serverPlayer) //Sends to clients so they see Host move
+        void UpdateUnitMove(Vector3 movePos) //Sends to clients so they see Host move
         {
             agent.SetDestination(movePos);
         }
@@ -82,21 +82,15 @@ namespace Mirror.Examples.Tanks
             {
                 currPos = hit.point;
                 agent.SetDestination(currPos);
-                CmdMoveUnit(currPos, gameObject); //triggers to send this move to Server
+                CmdMoveUnit(currPos); //triggers to send this move to Server
             }
         }
 
         [Command]
-        void CmdMoveUnit(Vector3 movePos, GameObject client) //Updating Client move to Server
+        void CmdMoveUnit(Vector3 movePos) //Updating Client move to Server
         {
             agent.SetDestination(movePos);
-            RpcClientMoveToClients(movePos, gameObject); //should update client's move to other clients connected
-        }
-
-        [ClientRpc]
-        void RpcClientMoveToClients(Vector3 movePos, GameObject client) //This should update the client's move to other client observing 
-        {
-            agent.SetDestination(movePos);
+            UpdateUnitMove(movePos); //should update client's move to other clients connected
         }
 
         // this is called on the server
