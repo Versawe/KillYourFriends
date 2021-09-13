@@ -8,10 +8,12 @@ public class Unit : NetworkBehaviour
     public Material selectedMAT;
     public Material unselectedMAT;
 
-
+    public NetworkIdentity owner;
 
     public void SelectUnit() 
     {
+        if (!hasAuthority) return;
+
         isSelected = true;
         gameObject.GetComponent<Renderer>().material = selectedMAT;
     }
