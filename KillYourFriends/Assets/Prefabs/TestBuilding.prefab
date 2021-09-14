@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 5267804243584563456}
   - component: {fileID: 5267804243584563457}
   - component: {fileID: 5267804243584563710}
-  - component: {fileID: 5267804243584563711}
   m_Layer: 0
   m_Name: BuildingBody
   m_TagString: Untagged
@@ -82,19 +81,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &5267804243584563711
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5267804243584563708}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &5267804244500745304
 GameObject:
   m_ObjectHideFlags: 0
@@ -106,9 +92,11 @@ GameObject:
   - component: {fileID: 5267804244500745307}
   - component: {fileID: 5335108555576528491}
   - component: {fileID: 5572206667192128519}
+  - component: {fileID: 2388138924320501406}
+  - component: {fileID: 4060389712842628801}
   m_Layer: 0
   m_Name: TestBuilding
-  m_TagString: Untagged
+  m_TagString: Selectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -157,3 +145,38 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02f1ac1372adce94c8b062a74e754f42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
+  selected: {fileID: 0}
+--- !u!114 &2388138924320501406
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5267804244500745304}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa113003a4904dc4eb933adedbbe42ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
+  IsSelected: 0
+  selectedMAT: {fileID: 2100000, guid: e84a56fd1c960784fb65a3e2ddde9c1f, type: 2}
+  unselectedMAT: {fileID: 2100000, guid: 1606c58ff8d3fc9459c5c39db49c72ab, type: 2}
+  objToken: 
+  owner: {fileID: 0}
+--- !u!65 &4060389712842628801
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5267804244500745304}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 4.9869537, y: 4.992318, z: 5.023574}
+  m_Center: {x: 0.08457184, y: 2.5398355, z: 0.2612115}

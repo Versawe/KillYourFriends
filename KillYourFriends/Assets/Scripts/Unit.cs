@@ -3,18 +3,11 @@ using UnityEngine;
 
 public class Unit : NetworkBehaviour
 {
-    public bool isSelected = false;
+    public SelectableObj selected;
 
-    public Material selectedMAT;
-    public Material unselectedMAT;
-
-    public NetworkIdentity owner;
-
-    public void SelectUnit() 
+    private void Start()
     {
-        if (!hasAuthority) return;
-
-        isSelected = true;
-        gameObject.GetComponent<Renderer>().material = selectedMAT;
+        selected = GetComponent<SelectableObj>();
     }
+
 }

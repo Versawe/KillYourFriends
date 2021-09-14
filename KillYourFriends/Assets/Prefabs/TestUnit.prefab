@@ -11,10 +11,9 @@ GameObject:
   - component: {fileID: 1706608477798041502}
   - component: {fileID: 1706608477798041503}
   - component: {fileID: 1706608477798041500}
-  - component: {fileID: 1706608477798041501}
   m_Layer: 0
   m_Name: Body
-  m_TagString: Selectable
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -82,19 +81,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &1706608477798041501
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1706608477798041498}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &4796365427453319690
 GameObject:
   m_ObjectHideFlags: 0
@@ -107,9 +93,11 @@ GameObject:
   - component: {fileID: 6035980087507478981}
   - component: {fileID: 4599299103453738891}
   - component: {fileID: 5020018535277410810}
+  - component: {fileID: 3972374920538333680}
+  - component: {fileID: 2107401036614408559}
   m_Layer: 0
   m_Name: TestUnit
-  m_TagString: Untagged
+  m_TagString: Selectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -160,10 +148,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   syncMode: 0
   syncInterval: 0.1
-  isSelected: 0
-  selectedMAT: {fileID: 2100000, guid: e84a56fd1c960784fb65a3e2ddde9c1f, type: 2}
-  unselectedMAT: {fileID: 2100000, guid: e9682cc0060606c49b7e7ac82973a938, type: 2}
-  owner: {fileID: 0}
+  selected: {fileID: 0}
 --- !u!195 &5020018535277410810
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -186,3 +171,35 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &3972374920538333680
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4796365427453319690}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa113003a4904dc4eb933adedbbe42ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
+  IsSelected: 0
+  selectedMAT: {fileID: 2100000, guid: e84a56fd1c960784fb65a3e2ddde9c1f, type: 2}
+  unselectedMAT: {fileID: 2100000, guid: e9682cc0060606c49b7e7ac82973a938, type: 2}
+  objToken: 
+  owner: {fileID: 0}
+--- !u!65 &2107401036614408559
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4796365427453319690}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.9956199, y: 2.0245626, z: 2.0361392}
+  m_Center: {x: 0.017365277, y: 0.99272597, z: 0.0028942823}
