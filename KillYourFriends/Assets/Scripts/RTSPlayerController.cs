@@ -2,6 +2,8 @@ using UnityEngine;
 using Mirror;
 using Telepathy;
 using System.Collections.Generic;
+using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
 public class RTSPlayerController : NetworkBehaviour
 {
@@ -11,14 +13,24 @@ public class RTSPlayerController : NetworkBehaviour
 
     Camera CameraMain;
     AudioListener Listener;
+    Canvas canvas;
+
+    public Button CreateUnitButton;
 
     public List<GameObject> playersSelection = new List<GameObject>();
+
+    GraphicRaycaster graph;
+
+    EventSystem eventSys;
 
     public override void OnStartClient()
     {
         base.OnStartClient();
         CameraMain = GetComponent<Camera>();
         Listener = GetComponent<AudioListener>();
+        canvas = GetComponentInChildren<Canvas>();
+        eventSys = GameObject.Find("EventSystem").GetComponent<EventSystem>();
+        graph = canvas.GetComponent<GraphicRaycaster>();
 
         Ray ray = new Ray(transform.position, transform.forward);
         RaycastHit hit;
@@ -30,6 +42,9 @@ public class RTSPlayerController : NetworkBehaviour
         if (isLocalPlayer) return;
         Listener.enabled = false;
         CameraMain.enabled = false;
+        canvas.enabled = false;
+        graph.enabled = false;
+        enabled = false;
     }
 
     [Command]
@@ -59,10 +74,13 @@ public class RTSPlayerController : NetworkBehaviour
     [Client]
     private GameObject ClickedObject() 
     {
+        if (eventSys.IsPointerOverGameObject()) return null; // if over UI element
+
         Ray ray = CameraMain.ScreenPointToRay(Input.mousePosition);
         RaycastHit hit;
         if (Physics.Raycast(ray, out hit, 100))
         {
+            if (hit.transform.gameObject.tag == "UI") return null;
             if(hit.transform.gameObject.tag == "Ground") 
             {
                 ClearSelection();

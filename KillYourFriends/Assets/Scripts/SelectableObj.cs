@@ -7,8 +7,6 @@ public class SelectableObj : NetworkBehaviour
     public Material selectedMAT;
     public Material unselectedMAT;
 
-    public NetworkIdentity ownerInstance;
-
     public void SelectObject()
     {
         if (!netIdentity.hasAuthority) return;
@@ -16,7 +14,6 @@ public class SelectableObj : NetworkBehaviour
         IsSelected = true;
         gameObject.GetComponentInChildren<Renderer>().material = selectedMAT;
     }
-
     public void DeSelectObject() 
     {
         if (!netIdentity.hasAuthority) return; //don't know if this is needed
