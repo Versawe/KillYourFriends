@@ -9,11 +9,19 @@ public class Unit : NetworkBehaviour
     NavMeshAgent agent;
 
     Vector3 currPos;
+
+    private bool IsStopped = false;
+    private float closeEnough = 8f;
+    private float stopMovementTimer = 4f;
+    private float stopMovementAfter = 4f;
+    
     private void Start()
     {
         selected = GetComponent<SelectableObj>();
         agent = GetComponent<NavMeshAgent>();
         currPos = transform.position;
+
+        MoveUnitStart();
     }
 
     private void Update()
@@ -23,39 +31,51 @@ public class Unit : NetworkBehaviour
 
         if (!selected.IsSelected) return;
 
+        if (!IsStopped) UnitChill();
+        else
+        {
+            agent.SetDestination(transform.position);
+            stopMovementTimer = stopMovementAfter;
+        }
+
         if (Input.GetButtonDown("Fire2"))
         {
-            if (!isServer) MoveUnit();
-            else
-            {
-                MoveHostUnit();
-            }
+            MoveUnit();
         }
     }
-
-    [Server]
-    void MoveHostUnit() //Host moves locally
+    
+    //Functions that happen on client only
+    [Client]
+    private void UnitChill()
     {
-        Ray ray;
-        RaycastHit hit;
-        ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-        if (Physics.Raycast(ray, out hit, 100))
+        Vector3 offset = currPos - transform.position;
+        float sqrLen = offset.sqrMagnitude;
+
+        // square the distance we compare with
+        if (sqrLen < closeEnough * closeEnough)
         {
-            currPos = hit.point;
-            agent.SetDestination(currPos);
-            UpdateUnitMove(currPos); //triggers move to send to clients
+            stopMovementTimer -= 1 * Time.deltaTime;
+        }
+
+        if(stopMovementTimer <= 0)
+        {
+            IsStopped = true;
+            CmdStopMove(transform.position);
         }
     }
-
-    [ClientRpc]
-    void UpdateUnitMove(Vector3 movePos) //Sends to clients so they see Host move
+    [Client]
+    void MoveUnitStart() //Client Moving Locally
     {
-        agent.SetDestination(movePos);
+        currPos = new Vector3(currPos.x, currPos.y, currPos.z-4f);
+        agent.isStopped = false;
+        agent.SetDestination(currPos);
+        CmdMoveUnit(currPos); //triggers to send this move to Server
     }
-
     [Client]
     void MoveUnit() //Client Moving Locally
     {
+        IsStopped = false;
+        stopMovementTimer = stopMovementAfter;
         Ray ray;
         RaycastHit hit;
         ray = Camera.main.ScreenPointToRay(Input.mousePosition);
@@ -67,11 +87,30 @@ public class Unit : NetworkBehaviour
         }
     }
 
+    //functions sent from client to server
     [Command]
     void CmdMoveUnit(Vector3 movePos) //Updating Client move to Server
     {
         agent.SetDestination(movePos);
-        UpdateUnitMove(movePos); //should update client's move to other clients connected
+        RpcUpdateUnitMove(movePos); //should update client's move to other clients connected
+    }
+    [Command]
+    void CmdStopMove(Vector3 stopPos)
+    {
+        agent.SetDestination(transform.position);
+        RpcUpdateUnitStop(transform.position);
+    }
+
+    //functions that retreived Cmd and now giving back out to other clients
+    [ClientRpc]
+    void RpcUpdateUnitMove(Vector3 movePos) //Sends to clients so they see Host move
+    {
+        agent.SetDestination(movePos);
+    }
+    [ClientRpc]
+    void RpcUpdateUnitStop(Vector3 stopPos)
+    {
+        agent.SetDestination(stopPos);
     }
 
 }

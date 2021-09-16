@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4040333500409670522}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 0.22, y: 0.08, z: -4.19}
+  m_LocalPosition: {x: 0.22, y: 0, z: -2.97}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5267804244500745307}
@@ -41,6 +41,7 @@ GameObject:
   - component: {fileID: 5267804243584563456}
   - component: {fileID: 5267804243584563457}
   - component: {fileID: 5267804243584563710}
+  - component: {fileID: 345772133860498479}
   m_Layer: 0
   m_Name: BuildingBody
   m_TagString: Untagged
@@ -111,6 +112,22 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!208 &345772133860498479
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5267804243584563708}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0, z: 0}
+  m_TimeToStationary: 0.5
 --- !u!1 &5267804244500745304
 GameObject:
   m_ObjectHideFlags: 0
