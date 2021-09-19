@@ -34,7 +34,6 @@ public class Unit : NetworkBehaviour
         if (!IsStopped) UnitChill();
         else
         {
-            agent.SetDestination(transform.position);
             stopMovementTimer = stopMovementAfter;
         }
 
@@ -42,6 +41,7 @@ public class Unit : NetworkBehaviour
         {
             MoveUnit();
         }
+
     }
     
     //Functions that happen on client only
@@ -60,7 +60,9 @@ public class Unit : NetworkBehaviour
         if(stopMovementTimer <= 0)
         {
             IsStopped = true;
-            CmdStopMove(transform.position);
+            //CmdStopMove(transform.position);
+            //sub for stop movement
+            agent.SetDestination(transform.position);
         }
     }
     [Client]
@@ -69,7 +71,7 @@ public class Unit : NetworkBehaviour
         currPos = new Vector3(currPos.x, currPos.y, currPos.z-4f);
         agent.isStopped = false;
         agent.SetDestination(currPos);
-        CmdMoveUnit(currPos); //triggers to send this move to Server
+        //CmdMoveUnit(currPos); //triggers to send this move to Server
     }
     [Client]
     void MoveUnit() //Client Moving Locally
@@ -83,16 +85,18 @@ public class Unit : NetworkBehaviour
         {
             currPos = hit.point;
             agent.SetDestination(currPos);
-            CmdMoveUnit(currPos); //triggers to send this move to Server
+            //CmdMoveUnit(currPos); //triggers to send this move to Server
         }
     }
 
+    // Cmd to RPC, decent strat for transfering data to server and back out to all clients, 
+    // not good for tracking positions and keeping transforms synced properly, with all the collisions
     //functions sent from client to server
-    [Command]
+    /*[Command]
     void CmdMoveUnit(Vector3 movePos) //Updating Client move to Server
     {
         agent.SetDestination(movePos);
-        RpcUpdateUnitMove(movePos); //should update client's move to other clients connected
+        //RpcUpdateUnitMove(movePos); //should update client's move to other clients connected
     }
     [Command]
     void CmdStopMove(Vector3 stopPos)
@@ -111,6 +115,6 @@ public class Unit : NetworkBehaviour
     void RpcUpdateUnitStop(Vector3 stopPos)
     {
         agent.SetDestination(stopPos);
-    }
+    }*/
 
 }

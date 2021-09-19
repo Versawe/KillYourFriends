@@ -95,6 +95,7 @@ GameObject:
   - component: {fileID: 5020018535277410810}
   - component: {fileID: 3972374920538333680}
   - component: {fileID: 2107401036614408559}
+  - component: {fileID: 1222747402779622137}
   m_Layer: 0
   m_Name: TestUnit
   m_TagString: Selectable
@@ -201,3 +202,32 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.9956199, y: 2.0245626, z: 2.0361392}
   m_Center: {x: 0.017365277, y: 0.99272597, z: 0.0028942823}
+--- !u!114 &1222747402779622137
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4796365427453319690}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f74aedd71d9a4f55b3ce499326d45fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
+  clientAuthority: 1
+  sendInterval: 0.05
+  syncPosition: 1
+  syncRotation: 1
+  syncScale: 0
+  interpolatePosition: 1
+  interpolateRotation: 1
+  interpolateScale: 1
+  bufferTimeMultiplier: 3
+  bufferSizeLimit: 64
+  catchupThreshold: 6
+  catchupMultiplier: 0.1
+  showGizmos: 0
+  showOverlay: 0
+  overlayColor: {r: 0, g: 0, b: 0, a: 0.5}
